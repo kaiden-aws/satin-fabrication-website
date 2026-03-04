@@ -123,13 +123,55 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| — | — | Populated during roadmap creation |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Pending |
+| DSGN-03 | Phase 1 | Pending |
+| DSGN-04 | Phase 1 | Pending |
+| DSGN-05 | Phase 1 | Pending |
+| DSGN-06 | Phase 1 | Pending |
+| NAV-01 | Phase 2 | Pending |
+| NAV-02 | Phase 2 | Pending |
+| NAV-03 | Phase 2 | Pending |
+| NAV-04 | Phase 2 | Pending |
+| INTR-01 | Phase 2 | Pending |
+| INTR-03 | Phase 2 | Pending |
+| INTR-02 | Phase 3 | Pending |
+| PORT-03 | Phase 3 | Pending |
+| PROC-02 | Phase 3 | Pending |
+| HERO-01 | Phase 4 | Pending |
+| HERO-02 | Phase 4 | Pending |
+| HERO-03 | Phase 4 | Pending |
+| HERO-04 | Phase 4 | Pending |
+| SRVC-01 | Phase 4 | Pending |
+| SRVC-02 | Phase 4 | Pending |
+| SRVC-03 | Phase 4 | Pending |
+| PORT-01 | Phase 4 | Pending |
+| PORT-02 | Phase 4 | Pending |
+| PORT-04 | Phase 4 | Pending |
+| PROC-01 | Phase 4 | Pending |
+| PROC-03 | Phase 4 | Pending |
+| CNTC-01 | Phase 4 | Pending |
+| CNTC-02 | Phase 4 | Pending |
+| CNTC-03 | Phase 4 | Pending |
+| CNTC-04 | Phase 4 | Pending |
+| CNTC-05 | Phase 4 | Pending |
+| FOOT-01 | Phase 4 | Pending |
+| FOOT-02 | Phase 4 | Pending |
+| FOOT-03 | Phase 4 | Pending |
+| FOOT-04 | Phase 4 | Pending |
+| SRVC-04 | Phase 5 | Pending |
+| SEO-01 | Phase 5 | Pending |
+| SEO-02 | Phase 5 | Pending |
+| SEO-03 | Phase 5 | Pending |
+| SEO-04 | Phase 5 | Pending |
+| SEO-05 | Phase 5 | Pending |
+| SEO-06 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 37 total
-- Mapped to phases: 0
-- Unmapped: 37 ⚠️
+- v1 requirements: 43 total
+- Mapped to phases: 43
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-03*
-*Last updated: 2026-03-03 after initial definition*
+*Last updated: 2026-03-04 — traceability populated during roadmap creation*
