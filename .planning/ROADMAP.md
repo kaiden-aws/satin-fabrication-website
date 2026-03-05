@@ -60,7 +60,10 @@ Plans:
   2. A masonry grid component renders a set of images in 3 columns on desktop and 2 on tablet with no hydration mismatch error in the browser console
   3. A before/after slider component is draggable on desktop (mouse) and swipeable on mobile (touch) with no layout shift or pointer-events breakage
   4. A process timeline component draws an animated gold connecting line between steps using Motion `pathLength` — the line advances sequentially as the user scrolls through the section
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — MotionWrapper, ParallaxWrapper, MasonryGrid, and test harness page
+- [ ] 03-02-PLAN.md — BeforeAfterSlider, ProcessTimeline, ScrollAssembly, and test harness integration
 
 ### Phase 4: Homepage Sections
 **Goal**: The complete homepage is live with all six sections — a visitor can experience the full brand narrative from hero to contact form, including scroll animations, portfolio gallery, process timeline, and a validated quote request form
@@ -108,7 +111,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | - |
 | 2. Global Chrome | 2/2 | Complete   | 2026-03-05 |
-| 3. UI Primitives | 0/TBD | Not started | - |
+| 3. UI Primitives | 0/2 | Not started | - |
 | 4. Homepage Sections | 0/TBD | Not started | - |
 | 5. Services Page and SEO | 0/TBD | Not started | - |
 | 6. Polish, Accessibility, and Pre-Launch QA | 0/TBD | Not started | - |
