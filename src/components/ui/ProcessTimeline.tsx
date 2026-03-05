@@ -1,6 +1,6 @@
 'use client'
 
-import { m, useScroll, useTransform } from 'motion/react'
+import { m, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -16,8 +16,10 @@ interface ProcessTimelineProps {
 }
 
 export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
+  const shouldReduceMotion = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
 
+  // Hooks called unconditionally (rules of hooks)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end center'],
@@ -44,7 +46,7 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
             stroke="var(--color-charcoal)"
             strokeWidth="2"
           />
-          {/* Animated gold line — strokeDasharray="0 1" prevents SSR flash */}
+          {/* Animated gold line — static full draw when reduced motion */}
           <m.line
             x1="1"
             y1="0"
@@ -52,45 +54,71 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
             y2="100"
             stroke="var(--color-gold)"
             strokeWidth="2"
-            style={{ pathLength }}
+            style={{ pathLength: shouldReduceMotion ? 1 : pathLength }}
             strokeDasharray="0 1"
           />
         </svg>
 
         {/* Steps */}
-        {steps.map((step, i) => (
-          <m.div
-            key={step.number}
-            className={cn(
-              'relative pl-16 pb-16',
-              i === steps.length - 1 && 'pb-0'
-            )}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{
-              duration: 0.7,
-              delay: i * 0.15,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-          >
-            {/* Step dot on the line */}
-            <div className="absolute left-4 top-0 flex h-5 w-5 items-center justify-center rounded-full border-2 border-gold bg-void" />
+        {steps.map((step, i) =>
+          shouldReduceMotion ? (
+            <div
+              key={step.number}
+              className={cn(
+                'relative pl-16 pb-16',
+                i === steps.length - 1 && 'pb-0'
+              )}
+            >
+              {/* Step dot on the line */}
+              <div className="absolute left-4 top-0 flex h-5 w-5 items-center justify-center rounded-full border-2 border-gold bg-void" />
 
-            {/* Large step number (background decoration) */}
-            <span className="font-display text-6xl font-bold text-gold/10 select-none">
-              {step.number}
-            </span>
+              {/* Large step number (background decoration) */}
+              <span className="font-display text-6xl font-bold text-gold/10 select-none">
+                {step.number}
+              </span>
 
-            {/* Title — overlaps the large number */}
-            <h3 className="-mt-8 font-display text-xl font-semibold text-cream">
-              {step.title}
-            </h3>
+              {/* Title — overlaps the large number */}
+              <h3 className="-mt-8 font-display text-xl font-semibold text-cream">
+                {step.title}
+              </h3>
 
-            {/* Description */}
-            <p className="mt-2 font-body text-warm-gray">{step.description}</p>
-          </m.div>
-        ))}
+              {/* Description */}
+              <p className="mt-2 font-body text-warm-gray">{step.description}</p>
+            </div>
+          ) : (
+            <m.div
+              key={step.number}
+              className={cn(
+                'relative pl-16 pb-16',
+                i === steps.length - 1 && 'pb-0'
+              )}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{
+                duration: 0.7,
+                delay: i * 0.15,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+            >
+              {/* Step dot on the line */}
+              <div className="absolute left-4 top-0 flex h-5 w-5 items-center justify-center rounded-full border-2 border-gold bg-void" />
+
+              {/* Large step number (background decoration) */}
+              <span className="font-display text-6xl font-bold text-gold/10 select-none">
+                {step.number}
+              </span>
+
+              {/* Title — overlaps the large number */}
+              <h3 className="-mt-8 font-display text-xl font-semibold text-cream">
+                {step.title}
+              </h3>
+
+              {/* Description */}
+              <p className="mt-2 font-body text-warm-gray">{step.description}</p>
+            </m.div>
+          )
+        )}
       </div>
     </div>
   )

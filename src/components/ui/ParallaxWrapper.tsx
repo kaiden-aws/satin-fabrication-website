@@ -1,6 +1,6 @@
 'use client'
 
-import { m, useScroll, useTransform } from 'motion/react'
+import { m, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
@@ -16,9 +16,10 @@ export function ParallaxWrapper({
   speed = 0.5,
   className,
 }: ParallaxWrapperProps) {
+  const shouldReduceMotion = useReducedMotion()
   const ref = useRef<HTMLDivElement>(null)
 
-  // Track full element traversal through viewport
+  // Hooks must be called unconditionally (rules of hooks)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
@@ -31,7 +32,7 @@ export function ParallaxWrapper({
   return (
     <m.div
       ref={ref}
-      style={{ y }}
+      style={shouldReduceMotion ? undefined : { y }}
       className={cn(className)}
     >
       {children}

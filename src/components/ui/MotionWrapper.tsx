@@ -1,6 +1,6 @@
 'use client'
 
-import { m } from 'motion/react'
+import { m, useReducedMotion } from 'motion/react'
 import type { ElementType, ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -17,9 +17,16 @@ export function MotionWrapper({
   className,
   as: _as = 'div',
 }: MotionWrapperProps) {
+  const shouldReduceMotion = useReducedMotion()
+
+  // When reduced motion is preferred, render static content in final state
+  // — no opacity fade, no y transform, no animation wrapper
+  if (shouldReduceMotion) {
+    const Tag = _as as ElementType
+    return <Tag className={cn(className)}>{children}</Tag>
+  }
+
   // LazyMotion strict mode requires m.* components — motion.* will throw
-  // MotionConfig reducedMotion="user" in Providers auto-suppresses animation
-  // when OS prefers-reduced-motion is enabled
   const Component = m[_as as keyof typeof m] as typeof m.div
 
   return (

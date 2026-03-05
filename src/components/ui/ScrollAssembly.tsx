@@ -1,6 +1,6 @@
 'use client'
 
-import { m, useScroll, useTransform } from 'motion/react'
+import { m, useReducedMotion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -25,6 +25,7 @@ interface ScrollAssemblyProps {
  * by the consumer — the component itself is generic.
  */
 export function ScrollAssembly({ pieces, className }: ScrollAssemblyProps) {
+  const shouldReduceMotion = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -42,6 +43,7 @@ export function ScrollAssembly({ pieces, className }: ScrollAssemblyProps) {
               key={piece.id}
               piece={piece}
               scrollYProgress={scrollYProgress}
+              shouldReduceMotion={shouldReduceMotion}
             />
           ))}
         </div>
@@ -57,10 +59,13 @@ export function ScrollAssembly({ pieces, className }: ScrollAssemblyProps) {
 function AssemblyPieceElement({
   piece,
   scrollYProgress,
+  shouldReduceMotion,
 }: {
   piece: AssemblyPiece
   scrollYProgress: ReturnType<typeof useScroll>['scrollYProgress']
+  shouldReduceMotion: boolean | null
 }) {
+  // Hooks called unconditionally (rules of hooks)
   const x = useTransform(scrollYProgress, [0, 0.8], [piece.initialX, 0])
   const y = useTransform(scrollYProgress, [0, 0.8], [piece.initialY, 0])
   const rotate = useTransform(
@@ -87,7 +92,11 @@ function AssemblyPieceElement({
         'absolute left-1/2 top-1/2 flex items-center justify-center rounded border border-gold/30 bg-charcoal',
         sizeClass
       )}
-      style={{ x, y, rotate, opacity }}
+      style={
+        shouldReduceMotion
+          ? { x: 0, y: 0, rotate: 0, opacity: 1 }
+          : { x, y, rotate, opacity }
+      }
     >
       <span className="font-body text-xs text-warm-gray select-none">
         {piece.label}
