@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Raleway } from 'next/font/google'
+import { Providers } from '@/providers/Providers'
+import { GrainOverlay } from '@/components/layout/GrainOverlay'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -29,7 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${raleway.variable}`} suppressHydrationWarning>
       <body className="bg-void text-cream antialiased font-body">
-        {children}
+        <Providers>
+          {children}
+        </Providers>
+        <GrainOverlay />
       </body>
     </html>
   )
