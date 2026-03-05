@@ -18,10 +18,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Fixed/sticky navbar that is transparent over hero, transitions to solid dark (#0A0A0A with backdrop-blur) on scroll
-- [ ] **NAV-02**: Full-screen mobile menu overlay with large centered nav links, staggered fade-in animation, and 2-line hamburger that animates to X
-- [ ] **NAV-03**: Skip-to-content accessibility link for keyboard navigation
-- [ ] **NAV-04**: Desktop nav links (WORK, SERVICES, PROCESS, CONTACT) with gold underline that animates in from left on hover
+- [x] **NAV-01**: Fixed/sticky navbar that is transparent over hero, transitions to solid dark (#0A0A0A with backdrop-blur) on scroll
+- [x] **NAV-02**: Full-screen mobile menu overlay with large centered nav links, staggered fade-in animation, and 2-line hamburger that animates to X
+- [x] **NAV-03**: Skip-to-content accessibility link for keyboard navigation
+- [x] **NAV-04**: Desktop nav links (WORK, SERVICES, PROCESS, CONTACT) with gold underline that animates in from left on hover
 
 ### Hero
 
@@ -62,7 +62,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **INTR-01**: Custom cursor (desktop only) — small gold dot (8px) following mouse with slight lag (lerp via requestAnimationFrame), expands to 40px gold ring on interactive elements, shows "VIEW" text on image hover
 - [ ] **INTR-02**: Parallax effects — hero background at 0.5x scroll speed, portfolio images at 0.9x, using Framer Motion useScroll + useTransform
-- [ ] **INTR-03**: Micro-interactions — button gold glow (box-shadow), link underline slides in from left (scaleX + transform-origin), form focus border transitions
+- [x] **INTR-03**: Micro-interactions — button gold glow (box-shadow), link underline slides in from left (scaleX + transform-origin), form focus border transitions
 
 ### Footer
 
@@ -129,12 +129,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DSGN-04 | Phase 1 | Complete |
 | DSGN-05 | Phase 1 | Complete |
 | DSGN-06 | Phase 1 | Complete |
-| NAV-01 | Phase 2 | Pending |
-| NAV-02 | Phase 2 | Pending |
-| NAV-03 | Phase 2 | Pending |
-| NAV-04 | Phase 2 | Pending |
+| NAV-01 | Phase 2 | Complete |
+| NAV-02 | Phase 2 | Complete |
+| NAV-03 | Phase 2 | Complete |
+| NAV-04 | Phase 2 | Complete |
 | INTR-01 | Phase 2 | Pending |
-| INTR-03 | Phase 2 | Pending |
+| INTR-03 | Phase 2 | Complete |
 | INTR-02 | Phase 3 | Pending |
 | PORT-03 | Phase 3 | Pending |
 | PROC-02 | Phase 3 | Pending |
