@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-03-05T00:31:51.518Z"
-last_activity: 2026-03-04 — Roadmap created, phases derived from 43 v1 requirements
+status: completed
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-03-05T00:44:38.583Z"
+last_activity: 2026-03-05 — Completed 01-02-PLAN.md (animation infrastructure, grain overlay, visual verification)
 progress:
   total_phases: 6
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
-  percent: 50
+  completed_plans: 2
+  percent: 100
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-03)
 
 ## Current Position
 
-Phase: 1 of 6 (Foundation)
-Plan: 1 of 2 in current phase
-Status: Executing
-Last activity: 2026-03-05 — Completed 01-01-PLAN.md (scaffold, design tokens, fonts)
+Phase: 1 of 6 (Foundation) -- COMPLETE
+Plan: 2 of 2 in current phase
+Status: Phase Complete
+Last activity: 2026-03-05 — Completed 01-02-PLAN.md (animation infrastructure, grain overlay, visual verification)
 
-Progress: [█████░░░░░] 50%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -51,6 +51,7 @@ Progress: [█████░░░░░] 50%
 
 *Updated after each plan completion*
 | Phase 01 P01 | 4 | 2 tasks | 6 files |
+| Phase 01 P02 | 5 | 3 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,8 @@ Recent decisions affecting current work:
 - [Phase 01]: Used @theme (not @theme inline) for Tailwind v4 design tokens
 - [Phase 01]: Font variables on <html> element per research Pitfall 2 and 6 with suppressHydrationWarning
 - [Phase 01]: Scaffolded with Next.js 16.1.6 (latest stable) rather than pinning to 15.x
+- [Phase 01]: GrainOverlay placed outside Providers — pure CSS effect, no animation dependency
+- [Phase 01]: All animated components must use m.* from motion/react (not motion.*) — enforced by LazyMotion strict mode
 
 ### Pending Todos
 
@@ -79,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T00:31:51.516Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-03-05T00:44:38.581Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
