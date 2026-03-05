@@ -76,7 +76,11 @@ Plans:
   4. The process section shows 5 numbered steps with a gold connecting line that animates sequentially as the user scrolls through — step numbers render in low-opacity gold at 6xl behind the text
   5. The contact form accepts all required fields, validates them with Zod on submit, shows inline errors on invalid fields, and transitions to a success state animation on valid submission — no page reload
   6. The footer displays company name, phone, email, social icon links (gold on hover), and a back-to-top link
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 04-01-PLAN.md — Data layer (constants, schemas, hero CSS), HeroSection, and ServicesSection
+- [ ] 04-02-PLAN.md — PortfolioSection (masonry gallery) and ProcessSection (timeline wrapper)
+- [ ] 04-03-PLAN.md — ContactSection (Zod form), FooterSection, and page.tsx composition
 
 ### Phase 5: Services Page and SEO
 **Goal**: The dedicated /services page is live with expanded service detail, and both pages have complete SEO coverage — semantic HTML, meta tags, Open Graph, and JSON-LD structured data (gated on confirmed business NAP details from the owner)
@@ -112,6 +116,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation | 2/2 | Complete | - |
 | 2. Global Chrome | 2/2 | Complete   | 2026-03-05 |
 | 3. UI Primitives | 0/2 | Not started | - |
-| 4. Homepage Sections | 0/TBD | Not started | - |
+| 4. Homepage Sections | 0/3 | Not started | - |
 | 5. Services Page and SEO | 0/TBD | Not started | - |
 | 6. Polish, Accessibility, and Pre-Launch QA | 0/TBD | Not started | - |
