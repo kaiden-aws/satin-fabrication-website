@@ -92,7 +92,10 @@ Plans:
   3. Pasting the site URL into the LinkedIn/Twitter post composer or Facebook debugger renders the correct Open Graph image, title, and description
   4. Running the Google Rich Results Test against the homepage returns a valid LocalBusiness / HomeAndConstructionBusiness result with no errors (deploy only after confirmed NAP details received from owner)
   5. Lighthouse accessibility score is 95 or above on both pages — all images have alt text, all interactive elements have ARIA labels, and focus-visible gold ring styles are visible on keyboard navigation
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 05-01-PLAN.md — SEO metadata infrastructure, OG images, robots/sitemap, multi-page nav fix, and focus-visible accessibility
+- [ ] 05-02-PLAN.md — Dedicated /services page with expanded service detail, JSON-LD structured data, and accessibility audit
 
 ### Phase 6: Polish, Accessibility, and Pre-Launch QA
 **Goal**: Every known failure mode from the research pitfall list is verified and resolved — the site passes AODA compliance, Core Web Vitals, and cross-device QA before the domain goes live
@@ -117,5 +120,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. Global Chrome | 2/2 | Complete   | 2026-03-05 |
 | 3. UI Primitives | 0/2 | Not started | - |
 | 4. Homepage Sections | 3/3 | Complete   | 2026-03-05 |
-| 5. Services Page and SEO | 0/TBD | Not started | - |
+| 5. Services Page and SEO | 0/2 | Not started | - |
 | 6. Polish, Accessibility, and Pre-Launch QA | 0/TBD | Not started | - |
