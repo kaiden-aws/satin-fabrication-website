@@ -7,8 +7,14 @@ import { m } from 'motion/react'
 import { contactSchema, type ContactFormData } from '@/lib/schemas'
 import { MotionWrapper } from '@/components/ui/MotionWrapper'
 
+const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
+  : null
+
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const {
     register,
@@ -18,9 +24,27 @@ export function ContactSection() {
     resolver: zodResolver(contactSchema),
   })
 
-  function onSubmit(data: ContactFormData) {
-    console.log('Form submitted:', data)
-    setIsSubmitted(true)
+  async function onSubmit(data: ContactFormData) {
+    setSubmitError(null)
+    setIsSubmitting(true)
+    try {
+      if (FORMSPREE_URL) {
+        const res = await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data),
+        })
+        if (!res.ok) {
+          setSubmitError('Something went wrong. Please try again.')
+          return
+        }
+      }
+      setIsSubmitted(true)
+    } catch {
+      setSubmitError('Network error. Please check your connection and try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -191,10 +215,16 @@ export function ContactSection() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full py-3 border border-gold text-gold font-body text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-void btn-glow focus-gold"
+                  disabled={isSubmitting}
+                  className="w-full py-3 border border-gold text-gold font-body text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-void btn-glow focus-gold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  SEND MESSAGE
+                  {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
                 </button>
+                {submitError && (
+                  <p className="mt-2 text-sm text-red-400 text-center" role="alert">
+                    {submitError}
+                  </p>
+                )}
               </form>
             )}
           </MotionWrapper>
