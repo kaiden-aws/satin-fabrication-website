@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: Completed 06-02-PLAN.md
-last_updated: "2026-03-05T22:51:32Z"
+status: executing
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-03-05T22:54:40.780Z"
 last_activity: 2026-03-05 — Completed 06-02-PLAN.md (touch overlays, contrast audit, dev route exclusion)
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 14
-  completed_plans: 12
+  completed_plans: 13
   percent: 86
 ---
 
@@ -62,6 +62,7 @@ Progress: [█████████░] 86%
 | Phase 05 P01 | 2 | 2 tasks | 16 files |
 | Phase 05 P02 | 4 | 2 tasks | 8 files |
 | Phase 06 P02 | 1 | 2 tasks | 2 files |
+| Phase 06 P01 | 3 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -104,6 +105,9 @@ Recent decisions affecting current work:
 - [Phase 06]: Touch-first overlay: opacity-100 default with @media(hover:hover) gate -- ensures content never hidden on touch devices
 - [Phase 06]: All production gold (#C9A96E) text passes WCAG AAA (7:1+) on all backgrounds -- no contrast changes needed
 - [Phase 06]: /dev/ routes excluded from robots.txt indexing -- dev primitives page hidden from search engines
+- [Phase 06]: MotionWrapper uses early return with static Tag element for complete reduced motion suppression -- no m.* wrapper at all
+- [Phase 06]: Hooks called unconditionally in ParallaxWrapper/ScrollAssembly/ProcessTimeline -- guard applied at style/JSX level only per React rules of hooks
+- [Phase 06]: Hero gradient uses both JS useReducedMotion (animation: none) and CSS animation-play-state: paused for defense in depth
 
 ### Pending Todos
 
@@ -117,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T22:51:32Z
-Stopped at: Completed 06-02-PLAN.md
+Last session: 2026-03-05T22:54:40.778Z
+Stopped at: Completed 06-01-PLAN.md
 Resume file: None
