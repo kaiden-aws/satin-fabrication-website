@@ -31,7 +31,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The gold (#C9A96E), charcoal (#1A1A1A), void (#0A0A0A), and off-white (#F5F0EB) tokens are available as CSS variables and Tailwind utilities throughout the app
   4. A `LazyMotion` wrapper with `domAnimation` is in place at the root layout level and the `strict` prop throws a build error if any `motion.*` component (instead of `m.*`) is imported
   5. `MotionConfig reducedMotion="user"` is active in the root layout — verifiable by enabling "Reduce motion" in the OS and confirming Motion animations pause
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold Next.js 15, design tokens, fonts, and cn() utility
+- [ ] 01-02-PLAN.md — Animation infrastructure (LazyMotion/MotionConfig), grain overlay, and visual verification
 
 ### Phase 2: Global Chrome
 **Goal**: A visitor can open the site and experience the complete brand shell — correct dark aesthetic, working desktop and mobile navigation, gold accent language, grain texture, and custom cursor — before any content sections exist
@@ -100,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/2 | Planning complete | - |
 | 2. Global Chrome | 0/TBD | Not started | - |
 | 3. UI Primitives | 0/TBD | Not started | - |
 | 4. Homepage Sections | 0/TBD | Not started | - |
