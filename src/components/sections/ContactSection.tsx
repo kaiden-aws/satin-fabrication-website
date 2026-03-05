@@ -74,6 +74,7 @@ export function ContactSection() {
                     {...register('name')}
                     type="text"
                     placeholder="Your Name"
+                    aria-label="Your name"
                     className="input-luxury w-full bg-transparent py-3 text-cream placeholder:text-warm-gray/50 font-body"
                   />
                   {errors.name && (
@@ -89,6 +90,7 @@ export function ContactSection() {
                     {...register('email')}
                     type="email"
                     placeholder="Email Address"
+                    aria-label="Email address"
                     className="input-luxury w-full bg-transparent py-3 text-cream placeholder:text-warm-gray/50 font-body"
                   />
                   {errors.email && (
@@ -104,6 +106,7 @@ export function ContactSection() {
                     {...register('phone')}
                     type="tel"
                     placeholder="Phone Number"
+                    aria-label="Phone number"
                     className="input-luxury w-full bg-transparent py-3 text-cream placeholder:text-warm-gray/50 font-body"
                   />
                   {errors.phone && (
@@ -118,6 +121,7 @@ export function ContactSection() {
                   <div className="relative">
                     <select
                       {...register('projectType')}
+                      aria-label="Project type"
                       className="input-luxury w-full bg-transparent py-3 text-cream font-body appearance-none focus-gold"
                       defaultValue=""
                     >
@@ -173,6 +177,7 @@ export function ContactSection() {
                   <textarea
                     {...register('description')}
                     placeholder="Tell us about your project..."
+                    aria-label="Project description"
                     rows={4}
                     className="input-luxury w-full bg-transparent py-3 text-cream placeholder:text-warm-gray/50 font-body resize-none"
                   />

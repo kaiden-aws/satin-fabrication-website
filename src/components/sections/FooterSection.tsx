@@ -33,13 +33,13 @@ export function FooterSection() {
             <h4 className="font-display text-lg text-cream mb-4">Contact</h4>
             <a
               href="tel:+15551234567"
-              className="block font-body text-cream hover:text-gold transition-colors"
+              className="block font-body text-cream hover:text-gold transition-colors focus-gold"
             >
               (555) 123-4567
             </a>
             <a
               href="mailto:info@satinfabrication.com"
-              className="block mt-2 font-body text-cream hover:text-gold transition-colors"
+              className="block mt-2 font-body text-cream hover:text-gold transition-colors focus-gold"
             >
               info@satinfabrication.com
             </a>
@@ -59,7 +59,7 @@ export function FooterSection() {
                     aria-label={link.label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-warm-gray hover:text-gold transition-colors duration-300"
+                    className="text-warm-gray hover:text-gold transition-colors duration-300 focus-gold"
                   >
                     <IconComponent size={20} />
                   </a>
@@ -77,7 +77,7 @@ export function FooterSection() {
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-body text-sm text-warm-gray hover:text-gold transition-colors inline-flex items-center gap-1"
+            className="font-body text-sm text-warm-gray hover:text-gold transition-colors inline-flex items-center gap-1 focus-gold"
             aria-label="Scroll to top"
           >
             Back to Top
