@@ -21,7 +21,7 @@ export function HamburgerButton({ isOpen, toggle }: HamburgerButtonProps) {
   return (
     <button
       onClick={toggle}
-      className="relative z-[70] p-2 md:hidden"
+      className="relative z-[70] p-2 md:hidden focus-gold"
       aria-expanded={isOpen}
       aria-label={isOpen ? 'Close menu' : 'Open menu'}
     >

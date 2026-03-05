@@ -79,7 +79,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <m.li key={link.href} variants={itemVariants}>
                 <a
                   href={link.href}
-                  className="font-display text-4xl text-cream hover:text-gold transition-colors"
+                  className="font-display text-4xl text-cream hover:text-gold transition-colors focus-gold"
                   onClick={onClose}
                 >
                   {link.label}

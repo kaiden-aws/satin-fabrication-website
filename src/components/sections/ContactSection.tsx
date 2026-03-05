@@ -118,7 +118,7 @@ export function ContactSection() {
                   <div className="relative">
                     <select
                       {...register('projectType')}
-                      className="input-luxury w-full bg-transparent py-3 text-cream font-body appearance-none"
+                      className="input-luxury w-full bg-transparent py-3 text-cream font-body appearance-none focus-gold"
                       defaultValue=""
                     >
                       <option value="" disabled className="bg-void">
@@ -186,7 +186,7 @@ export function ContactSection() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full py-3 border border-gold text-gold font-body text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-void btn-glow"
+                  className="w-full py-3 border border-gold text-gold font-body text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-void btn-glow focus-gold"
                 >
                   SEND MESSAGE
                 </button>

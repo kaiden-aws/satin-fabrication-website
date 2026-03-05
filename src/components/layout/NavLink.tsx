@@ -13,7 +13,7 @@ export function NavLink({ href, label, className }: NavLinkProps) {
       className={cn(
         'relative font-body text-sm uppercase tracking-widest text-cream',
         'transition-colors duration-300 hover:text-gold',
-        'group',
+        'group focus-gold',
         className
       )}
     >

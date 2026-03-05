@@ -35,8 +35,8 @@ export function ServicesSection() {
                     {service.description}
                   </p>
                   <a
-                    href="#contact"
-                    className="mt-4 inline-block font-body text-sm text-gold hover:text-gold-light transition-colors"
+                    href="/#contact"
+                    className="mt-4 inline-block font-body text-sm text-gold hover:text-gold-light transition-colors focus-gold"
                   >
                     Learn More &rarr;
                   </a>

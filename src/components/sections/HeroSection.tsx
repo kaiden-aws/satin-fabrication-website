@@ -54,8 +54,8 @@ export function HeroSection() {
           }}
         >
           <a
-            href="#work"
-            className="inline-block px-8 py-3 mt-8 border border-gold text-gold font-body text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-void btn-glow"
+            href="/#work"
+            className="inline-block px-8 py-3 mt-8 border border-gold text-gold font-body text-sm tracking-widest uppercase transition-all duration-300 hover:bg-gold hover:text-void btn-glow focus-gold"
           >
             VIEW OUR WORK
           </a>

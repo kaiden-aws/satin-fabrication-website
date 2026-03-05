@@ -25,7 +25,7 @@ export function Navbar() {
         transition={{ duration: 0.3 }}
       >
         <div className="flex items-center justify-between">
-          <a href="/" className="font-display text-xl text-gold tracking-wider">
+          <a href="/" className="font-display text-xl text-gold tracking-wider focus-gold">
             SATIN
           </a>
 
