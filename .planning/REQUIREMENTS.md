@@ -41,13 +41,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **PORT-01**: Masonry-style grid gallery — 3 columns desktop, 2 tablet, 1 mobile — showing 8-10 project images
 - [ ] **PORT-02**: Image hover overlay showing project name and category in elegant typography with smooth fade-in
-- [ ] **PORT-03**: Scroll-driven exploded-to-assembled animation — scattered metalwork parts converge into finished product as user scrolls through section, using Framer Motion useScroll + useTransform
+- [x] **PORT-03**: Scroll-driven exploded-to-assembled animation — scattered metalwork parts converge into finished product as user scrolls through section, using Framer Motion useScroll + useTransform
 - [ ] **PORT-04**: Curated Unsplash metalwork placeholder images with consistent dark tone (metal stairs, gates, fireplaces, railings, architectural details)
 
 ### Process
 
 - [ ] **PROC-01**: 5-step horizontal timeline on desktop (vertical on mobile): Consultation, Design, Material Selection, Fabrication, Installation
-- [ ] **PROC-02**: Steps appear sequentially on scroll with animated connecting gold line using Framer Motion pathLength
+- [x] **PROC-02**: Steps appear sequentially on scroll with animated connecting gold line using Framer Motion pathLength
 - [ ] **PROC-03**: Large step numbers (01-05) in Playfair Display 6xl with low-opacity gold behind text
 
 ### Contact
@@ -136,8 +136,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INTR-01 | Phase 2 | Complete |
 | INTR-03 | Phase 2 | Complete |
 | INTR-02 | Phase 3 | Complete |
-| PORT-03 | Phase 3 | Pending |
-| PROC-02 | Phase 3 | Pending |
+| PORT-03 | Phase 3 | Complete |
+| PROC-02 | Phase 3 | Complete |
 | HERO-01 | Phase 4 | Pending |
 | HERO-02 | Phase 4 | Pending |
 | HERO-03 | Phase 4 | Pending |
