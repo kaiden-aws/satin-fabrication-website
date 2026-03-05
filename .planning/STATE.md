@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-01-PLAN.md
-last_updated: "2026-03-05T21:28:13.065Z"
-last_activity: 2026-03-05 — Completed 04-01-PLAN.md (data layer, HeroSection, ServicesSection)
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-05T21:32:03.034Z"
+last_activity: 2026-03-05 — Completed 04-02-PLAN.md (PortfolioSection, ProcessSection)
 progress:
   total_phases: 6
   completed_phases: 3
   total_plans: 9
-  completed_plans: 7
-  percent: 78
+  completed_plans: 8
+  percent: 89
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-03)
 ## Current Position
 
 Phase: 4 of 6 (Homepage Sections)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In Progress
-Last activity: 2026-03-05 — Completed 04-01-PLAN.md (data layer, HeroSection, ServicesSection)
+Last activity: 2026-03-05 — Completed 04-02-PLAN.md (PortfolioSection, ProcessSection)
 
-Progress: [████████░░] 78%
+Progress: [█████████░] 89%
 
 ## Performance Metrics
 
@@ -57,6 +57,7 @@ Progress: [████████░░] 78%
 | Phase 03 P01 | 2 | 3 tasks | 4 files |
 | Phase 03 P02 | 2 | 3 tasks | 4 files |
 | Phase 04 P01 | 2 | 2 tasks | 7 files |
+| Phase 04 P02 | 2 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,7 @@ Recent decisions affecting current work:
 - [Phase 04]: All section data arrays defined in constants.ts as single source of truth for Plans 02 and 03
 - [Phase 04]: HeroSection uses direct m.* animation (not MotionWrapper) for entrance stagger timing control
 - [Phase 04]: ServicesSection uses MotionWrapper for scroll-triggered reveal with staggered delays
+- [Phase 04]: ProcessTimeline steps prop widened to readonly TimelineStep[] for as-const data compatibility
 
 ### Pending Todos
 
@@ -100,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T21:28:13.062Z
-Stopped at: Completed 04-01-PLAN.md
+Last session: 2026-03-05T21:32:03.032Z
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None

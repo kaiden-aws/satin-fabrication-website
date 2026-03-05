@@ -39,16 +39,16 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Portfolio
 
-- [ ] **PORT-01**: Masonry-style grid gallery — 3 columns desktop, 2 tablet, 1 mobile — showing 8-10 project images
-- [ ] **PORT-02**: Image hover overlay showing project name and category in elegant typography with smooth fade-in
+- [x] **PORT-01**: Masonry-style grid gallery — 3 columns desktop, 2 tablet, 1 mobile — showing 8-10 project images
+- [x] **PORT-02**: Image hover overlay showing project name and category in elegant typography with smooth fade-in
 - [x] **PORT-03**: Scroll-driven exploded-to-assembled animation — scattered metalwork parts converge into finished product as user scrolls through section, using Framer Motion useScroll + useTransform
-- [ ] **PORT-04**: Curated Unsplash metalwork placeholder images with consistent dark tone (metal stairs, gates, fireplaces, railings, architectural details)
+- [x] **PORT-04**: Curated Unsplash metalwork placeholder images with consistent dark tone (metal stairs, gates, fireplaces, railings, architectural details)
 
 ### Process
 
-- [ ] **PROC-01**: 5-step horizontal timeline on desktop (vertical on mobile): Consultation, Design, Material Selection, Fabrication, Installation
+- [x] **PROC-01**: 5-step horizontal timeline on desktop (vertical on mobile): Consultation, Design, Material Selection, Fabrication, Installation
 - [x] **PROC-02**: Steps appear sequentially on scroll with animated connecting gold line using Framer Motion pathLength
-- [ ] **PROC-03**: Large step numbers (01-05) in Playfair Display 6xl with low-opacity gold behind text
+- [x] **PROC-03**: Large step numbers (01-05) in Playfair Display 6xl with low-opacity gold behind text
 
 ### Contact
 
@@ -145,11 +145,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SRVC-01 | Phase 4 | Complete |
 | SRVC-02 | Phase 4 | Complete |
 | SRVC-03 | Phase 4 | Complete |
-| PORT-01 | Phase 4 | Pending |
-| PORT-02 | Phase 4 | Pending |
-| PORT-04 | Phase 4 | Pending |
-| PROC-01 | Phase 4 | Pending |
-| PROC-03 | Phase 4 | Pending |
+| PORT-01 | Phase 4 | Complete |
+| PORT-02 | Phase 4 | Complete |
+| PORT-04 | Phase 4 | Complete |
+| PROC-01 | Phase 4 | Complete |
+| PROC-03 | Phase 4 | Complete |
 | CNTC-01 | Phase 4 | Pending |
 | CNTC-02 | Phase 4 | Pending |
 | CNTC-03 | Phase 4 | Pending |
