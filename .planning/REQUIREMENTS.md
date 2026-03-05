@@ -25,16 +25,16 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Hero
 
-- [ ] **HERO-01**: Full-viewport (100vh) hero with dark cinematic background — video placeholder or looping dark gradient animation fallback with 60% black overlay
-- [ ] **HERO-02**: Staggered text entrance animation — "SATIN FABRICATION" in Playfair 7xl-8xl with gold accent on "SATIN", tagline in Raleway uppercase
-- [ ] **HERO-03**: Gold-outlined CTA button ("VIEW OUR WORK") with smooth gold fill on hover transition
-- [ ] **HERO-04**: Animated scroll indicator at bottom (pulsing thin line or chevron)
+- [x] **HERO-01**: Full-viewport (100vh) hero with dark cinematic background — video placeholder or looping dark gradient animation fallback with 60% black overlay
+- [x] **HERO-02**: Staggered text entrance animation — "SATIN FABRICATION" in Playfair 7xl-8xl with gold accent on "SATIN", tagline in Raleway uppercase
+- [x] **HERO-03**: Gold-outlined CTA button ("VIEW OUR WORK") with smooth gold fill on hover transition
+- [x] **HERO-04**: Animated scroll indicator at bottom (pulsing thin line or chevron)
 
 ### Services
 
-- [ ] **SRVC-01**: 4 service cards in 2x2 grid (single column mobile): Railings & Staircases, Gates & Fencing, Custom Furniture & Fixtures, Fireplace Surrounds & Features
-- [ ] **SRVC-02**: Each card has dark background (#111111), subtle gold border, placeholder image (16:10), Playfair title, Raleway description, gold "Learn More →" link — staggered scroll reveal
-- [ ] **SRVC-03**: Card hover state: border brightens to full gold opacity, image scales to 1.03x with overflow hidden
+- [x] **SRVC-01**: 4 service cards in 2x2 grid (single column mobile): Railings & Staircases, Gates & Fencing, Custom Furniture & Fixtures, Fireplace Surrounds & Features
+- [x] **SRVC-02**: Each card has dark background (#111111), subtle gold border, placeholder image (16:10), Playfair title, Raleway description, gold "Learn More →" link — staggered scroll reveal
+- [x] **SRVC-03**: Card hover state: border brightens to full gold opacity, image scales to 1.03x with overflow hidden
 - [ ] **SRVC-04**: Dedicated /services sub-page with expanded detail for each service offering
 
 ### Portfolio
@@ -138,13 +138,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INTR-02 | Phase 3 | Complete |
 | PORT-03 | Phase 3 | Complete |
 | PROC-02 | Phase 3 | Complete |
-| HERO-01 | Phase 4 | Pending |
-| HERO-02 | Phase 4 | Pending |
-| HERO-03 | Phase 4 | Pending |
-| HERO-04 | Phase 4 | Pending |
-| SRVC-01 | Phase 4 | Pending |
-| SRVC-02 | Phase 4 | Pending |
-| SRVC-03 | Phase 4 | Pending |
+| HERO-01 | Phase 4 | Complete |
+| HERO-02 | Phase 4 | Complete |
+| HERO-03 | Phase 4 | Complete |
+| HERO-04 | Phase 4 | Complete |
+| SRVC-01 | Phase 4 | Complete |
+| SRVC-02 | Phase 4 | Complete |
+| SRVC-03 | Phase 4 | Complete |
 | PORT-01 | Phase 4 | Pending |
 | PORT-02 | Phase 4 | Pending |
 | PORT-04 | Phase 4 | Pending |
