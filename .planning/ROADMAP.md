@@ -46,7 +46,10 @@ Plans:
   3. On mobile, tapping the hamburger icon opens a full-screen dark overlay with centered nav links that stagger in; tapping again (or the X) closes it
   4. On desktop, a small gold dot follows the cursor with a slight lag; it expands to a 40px gold ring when hovering over interactive elements
   5. A subtle grain/noise texture is visible at low opacity across the entire viewport and does not flicker or repaint during scroll
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Navbar, mobile menu, skip-to-content link, desktop nav links, and micro-interaction CSS
+- [ ] 02-02-PLAN.md — Custom cursor with rAF + lerp tracking and hover expansion
 
 ### Phase 3: UI Primitives
 **Goal**: A complete library of reusable components exists — scroll-triggered animation wrapper, masonry grid, before/after slider, and process timeline — each independently verifiable before sections compose them
@@ -103,8 +106,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/2 | In Progress | - |
-| 2. Global Chrome | 0/TBD | Not started | - |
+| 1. Foundation | 2/2 | Complete | - |
+| 2. Global Chrome | 0/2 | Not started | - |
 | 3. UI Primitives | 0/TBD | Not started | - |
 | 4. Homepage Sections | 0/TBD | Not started | - |
 | 5. Services Page and SEO | 0/TBD | Not started | - |
