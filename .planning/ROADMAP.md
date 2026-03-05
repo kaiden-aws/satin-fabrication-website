@@ -13,7 +13,7 @@ Six dependency-ordered phases deliver a premium dark-luxury marketing website. D
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation** - Next.js scaffold, design tokens, fonts, animation infrastructure, and content data layer
-- [ ] **Phase 2: Global Chrome** - Navbar, custom cursor, grain overlay, and mobile navigation — the full site shell
+- [x] **Phase 2: Global Chrome** - Navbar, custom cursor, grain overlay, and mobile navigation — the full site shell (completed 2026-03-05)
 - [ ] **Phase 3: UI Primitives** - Reusable animation wrappers, masonry grid, before/after slider, and process timeline components
 - [ ] **Phase 4: Homepage Sections** - All six homepage sections composed from primitives — Hero through Contact
 - [ ] **Phase 5: Services Page and SEO** - Dedicated /services sub-page and full SEO/structured data wiring
@@ -46,7 +46,7 @@ Plans:
   3. On mobile, tapping the hamburger icon opens a full-screen dark overlay with centered nav links that stagger in; tapping again (or the X) closes it
   4. On desktop, a small gold dot follows the cursor with a slight lag; it expands to a 40px gold ring when hovering over interactive elements
   5. A subtle grain/noise texture is visible at low opacity across the entire viewport and does not flicker or repaint during scroll
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 Plans:
 - [ ] 02-01-PLAN.md — Navbar, mobile menu, skip-to-content link, desktop nav links, and micro-interaction CSS
 - [ ] 02-02-PLAN.md — Custom cursor with rAF + lerp tracking and hover expansion
@@ -107,7 +107,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | - |
-| 2. Global Chrome | 1/2 | In Progress | - |
+| 2. Global Chrome | 2/2 | Complete   | 2026-03-05 |
 | 3. UI Primitives | 0/TBD | Not started | - |
 | 4. Homepage Sections | 0/TBD | Not started | - |
 | 5. Services Page and SEO | 0/TBD | Not started | - |

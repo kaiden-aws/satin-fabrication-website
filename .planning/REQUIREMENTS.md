@@ -60,7 +60,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Interactive
 
-- [ ] **INTR-01**: Custom cursor (desktop only) — small gold dot (8px) following mouse with slight lag (lerp via requestAnimationFrame), expands to 40px gold ring on interactive elements, shows "VIEW" text on image hover
+- [x] **INTR-01**: Custom cursor (desktop only) — small gold dot (8px) following mouse with slight lag (lerp via requestAnimationFrame), expands to 40px gold ring on interactive elements, shows "VIEW" text on image hover
 - [ ] **INTR-02**: Parallax effects — hero background at 0.5x scroll speed, portfolio images at 0.9x, using Framer Motion useScroll + useTransform
 - [x] **INTR-03**: Micro-interactions — button gold glow (box-shadow), link underline slides in from left (scaleX + transform-origin), form focus border transitions
 
@@ -133,7 +133,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-02 | Phase 2 | Complete |
 | NAV-03 | Phase 2 | Complete |
 | NAV-04 | Phase 2 | Complete |
-| INTR-01 | Phase 2 | Pending |
+| INTR-01 | Phase 2 | Complete |
 | INTR-03 | Phase 2 | Complete |
 | INTR-02 | Phase 3 | Pending |
 | PORT-03 | Phase 3 | Pending |
