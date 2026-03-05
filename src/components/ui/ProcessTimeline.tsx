@@ -11,7 +11,7 @@ interface TimelineStep {
 }
 
 interface ProcessTimelineProps {
-  steps: TimelineStep[]
+  steps: readonly TimelineStep[]
   className?: string
 }
 
