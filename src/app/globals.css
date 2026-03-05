@@ -1,26 +1,57 @@
+/* src/app/globals.css */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Typography — maps next/font CSS variables to Tailwind utilities */
+  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-body: var(--font-raleway), "Raleway", "Helvetica Neue", sans-serif;
+
+  /* Color palette — DSGN-01 tokens */
+  --color-void: #0A0A0A;
+  --color-charcoal: #1A1A1A;
+  --color-surface: #111111;
+  --color-gold: #C9A96E;
+  --color-gold-light: #D4B87A;
+  --color-gold-dim: #8A7544;
+  --color-cream: #F5F0EB;
+  --color-warm-gray: #8A8278;
+
+  /* Easing — DSGN-04 specified cubic-bezier for luxury motion */
+  --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Animation — DSGN-04 reveal animation preset */
+  --animate-reveal: reveal 0.7s var(--ease-luxury) both;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Reduced motion — DSGN-05 CSS-level override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Base styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-void);
+  color: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
 }
