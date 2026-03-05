@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 3: UI Primitives** - Reusable animation wrappers, masonry grid, before/after slider, and process timeline components
 - [x] **Phase 4: Homepage Sections** - All six homepage sections composed from primitives — Hero through Contact (completed 2026-03-05)
 - [x] **Phase 5: Services Page and SEO** - Dedicated /services sub-page and full SEO/structured data wiring (completed 2026-03-05)
-- [ ] **Phase 6: Polish, Accessibility, and Pre-Launch QA** - AODA compliance verification, Core Web Vitals testing, and cross-device QA
+- [x] **Phase 6: Polish, Accessibility, and Pre-Launch QA** - AODA compliance verification, Core Web Vitals testing, and cross-device QA (completed 2026-03-05)
 
 ## Phase Details
 
@@ -107,7 +107,7 @@ Plans:
   3. Enabling "Reduce motion" in the OS completely suppresses all scroll-triggered reveals and entrance animations — no partial animations, no flashes
   4. The quote form submits successfully in a production environment and does not silently drop submissions (either a confirmation mechanism or a documented interim capture method is in place before launch)
   5. All gold accent usage passes WCAG AAA contrast when checked against the dark backgrounds — gold is decorative only; no gold text on dark backgrounds fails contrast
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 Plans:
 - [ ] 06-01-PLAN.md — Reduced motion hardening with useReducedMotion() guards on all animated components
 - [ ] 06-02-PLAN.md — Touch-friendly portfolio overlays, gold text contrast audit, and dev page exclusion
@@ -125,4 +125,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. UI Primitives | 0/2 | Not started | - |
 | 4. Homepage Sections | 3/3 | Complete   | 2026-03-05 |
 | 5. Services Page and SEO | 2/2 | Complete   | 2026-03-05 |
-| 6. Polish, Accessibility, and Pre-Launch QA | 0/3 | Not started | - |
+| 6. Polish, Accessibility, and Pre-Launch QA | 3/3 | Complete   | 2026-03-05 |
