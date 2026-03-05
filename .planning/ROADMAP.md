@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 1: Foundation** - Next.js scaffold, design tokens, fonts, animation infrastructure, and content data layer
 - [x] **Phase 2: Global Chrome** - Navbar, custom cursor, grain overlay, and mobile navigation — the full site shell (completed 2026-03-05)
 - [ ] **Phase 3: UI Primitives** - Reusable animation wrappers, masonry grid, before/after slider, and process timeline components
-- [ ] **Phase 4: Homepage Sections** - All six homepage sections composed from primitives — Hero through Contact
+- [x] **Phase 4: Homepage Sections** - All six homepage sections composed from primitives — Hero through Contact (completed 2026-03-05)
 - [ ] **Phase 5: Services Page and SEO** - Dedicated /services sub-page and full SEO/structured data wiring
 - [ ] **Phase 6: Polish, Accessibility, and Pre-Launch QA** - AODA compliance verification, Core Web Vitals testing, and cross-device QA
 
@@ -76,7 +76,7 @@ Plans:
   4. The process section shows 5 numbered steps with a gold connecting line that animates sequentially as the user scrolls through — step numbers render in low-opacity gold at 6xl behind the text
   5. The contact form accepts all required fields, validates them with Zod on submit, shows inline errors on invalid fields, and transitions to a success state animation on valid submission — no page reload
   6. The footer displays company name, phone, email, social icon links (gold on hover), and a back-to-top link
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 Plans:
 - [ ] 04-01-PLAN.md — Data layer (constants, schemas, hero CSS), HeroSection, and ServicesSection
 - [ ] 04-02-PLAN.md — PortfolioSection (masonry gallery) and ProcessSection (timeline wrapper)
@@ -116,6 +116,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation | 2/2 | Complete | - |
 | 2. Global Chrome | 2/2 | Complete   | 2026-03-05 |
 | 3. UI Primitives | 0/2 | Not started | - |
-| 4. Homepage Sections | 0/3 | Not started | - |
+| 4. Homepage Sections | 3/3 | Complete   | 2026-03-05 |
 | 5. Services Page and SEO | 0/TBD | Not started | - |
 | 6. Polish, Accessibility, and Pre-Launch QA | 0/TBD | Not started | - |

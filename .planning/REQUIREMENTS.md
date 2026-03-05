@@ -52,11 +52,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Contact
 
-- [ ] **CNTC-01**: Split layout — "LET'S CREATE SOMETHING EXTRAORDINARY" headline left, quote request form right
-- [ ] **CNTC-02**: Form fields: Name (text), Email (email), Phone (tel), Project Type (select: Railings & Staircases, Gates & Fencing, Custom Furniture & Fixtures, Fireplace Surrounds, Other), Project Description (textarea)
-- [ ] **CNTC-03**: Transparent input backgrounds with bottom-border only (gold at low opacity), off-white text, focus state animates border to full gold
-- [ ] **CNTC-04**: Client-side validation using Zod schema + react-hook-form
-- [ ] **CNTC-05**: Success state animation on form submit (frontend only, no backend)
+- [x] **CNTC-01**: Split layout — "LET'S CREATE SOMETHING EXTRAORDINARY" headline left, quote request form right
+- [x] **CNTC-02**: Form fields: Name (text), Email (email), Phone (tel), Project Type (select: Railings & Staircases, Gates & Fencing, Custom Furniture & Fixtures, Fireplace Surrounds, Other), Project Description (textarea)
+- [x] **CNTC-03**: Transparent input backgrounds with bottom-border only (gold at low opacity), off-white text, focus state animates border to full gold
+- [x] **CNTC-04**: Client-side validation using Zod schema + react-hook-form
+- [x] **CNTC-05**: Success state animation on form submit (frontend only, no backend)
 
 ### Interactive
 
@@ -66,10 +66,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Footer
 
-- [ ] **FOOT-01**: Company name, tagline, copyright, and "Proudly serving Southern Ontario's finest homes" text
-- [ ] **FOOT-02**: Social media icon links (Instagram, Facebook, LinkedIn) — small, gold on hover
-- [ ] **FOOT-03**: Smooth scroll back-to-top link
-- [ ] **FOOT-04**: Phone number and email prominently visible
+- [x] **FOOT-01**: Company name, tagline, copyright, and "Proudly serving Southern Ontario's finest homes" text
+- [x] **FOOT-02**: Social media icon links (Instagram, Facebook, LinkedIn) — small, gold on hover
+- [x] **FOOT-03**: Smooth scroll back-to-top link
+- [x] **FOOT-04**: Phone number and email prominently visible
 
 ### SEO & Performance
 
@@ -150,15 +150,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PORT-04 | Phase 4 | Complete |
 | PROC-01 | Phase 4 | Complete |
 | PROC-03 | Phase 4 | Complete |
-| CNTC-01 | Phase 4 | Pending |
-| CNTC-02 | Phase 4 | Pending |
-| CNTC-03 | Phase 4 | Pending |
-| CNTC-04 | Phase 4 | Pending |
-| CNTC-05 | Phase 4 | Pending |
-| FOOT-01 | Phase 4 | Pending |
-| FOOT-02 | Phase 4 | Pending |
-| FOOT-03 | Phase 4 | Pending |
-| FOOT-04 | Phase 4 | Pending |
+| CNTC-01 | Phase 4 | Complete |
+| CNTC-02 | Phase 4 | Complete |
+| CNTC-03 | Phase 4 | Complete |
+| CNTC-04 | Phase 4 | Complete |
+| CNTC-05 | Phase 4 | Complete |
+| FOOT-01 | Phase 4 | Complete |
+| FOOT-02 | Phase 4 | Complete |
+| FOOT-03 | Phase 4 | Complete |
+| FOOT-04 | Phase 4 | Complete |
 | SRVC-04 | Phase 5 | Pending |
 | SEO-01 | Phase 5 | Pending |
 | SEO-02 | Phase 5 | Pending |
