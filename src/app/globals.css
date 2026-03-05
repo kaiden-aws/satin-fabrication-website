@@ -34,6 +34,11 @@
   }
 }
 
+@keyframes heroGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 /* Reduced motion — DSGN-05 CSS-level override */
 @media (prefers-reduced-motion: reduce) {
   *,
