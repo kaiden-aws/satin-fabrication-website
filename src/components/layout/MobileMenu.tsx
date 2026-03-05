@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { m, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence, useReducedMotion } from 'motion/react'
 import { NAV_LINKS } from '@/lib/constants'
 
 const overlayVariants = {
@@ -35,6 +35,8 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const shouldReduceMotion = useReducedMotion()
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -53,6 +55,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     }
   }, [isOpen])
 
+  // Instant transitions when reduced motion is preferred
+  // Menu open/close is functional — but stagger/fade is decorative
+  const instantTransition = { duration: 0 }
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -63,7 +69,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           initial="closed"
           animate="open"
           exit="closed"
-          transition={{ duration: 0.3 }}
+          transition={shouldReduceMotion ? instantTransition : { duration: 0.3 }}
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
@@ -74,9 +80,18 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             initial="closed"
             animate="open"
             exit="closed"
+            transition={
+              shouldReduceMotion
+                ? { staggerChildren: 0, delayChildren: 0 }
+                : undefined
+            }
           >
             {NAV_LINKS.map((link) => (
-              <m.li key={link.href} variants={itemVariants}>
+              <m.li
+                key={link.href}
+                variants={itemVariants}
+                transition={shouldReduceMotion ? instantTransition : undefined}
+              >
                 <a
                   href={link.href}
                   className="font-display text-4xl text-cream hover:text-gold transition-colors focus-gold"
