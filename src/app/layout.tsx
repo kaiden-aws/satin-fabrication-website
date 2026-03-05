@@ -5,6 +5,7 @@ import { GrainOverlay } from '@/components/layout/GrainOverlay'
 import { SkipLink } from '@/components/layout/SkipLink'
 import { Navbar } from '@/components/layout/Navbar'
 import { CustomCursor } from '@/components/layout/CustomCursor'
+import { SITE_CONFIG } from '@/lib/metadata'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -22,8 +23,33 @@ const raleway = Raleway({
 })
 
 export const metadata: Metadata = {
-  title: 'Satin Fabrication | Custom Architectural Metalwork',
-  description: "Premium custom metal fabrication for Southern Ontario's finest homes.",
+  metadataBase: new URL(SITE_CONFIG.url),
+  title: {
+    default: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline} -- ${SITE_CONFIG.region}`,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+  description: SITE_CONFIG.description,
+  openGraph: {
+    type: 'website',
+    locale: SITE_CONFIG.locale,
+    siteName: SITE_CONFIG.name,
+    title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline} -- ${SITE_CONFIG.region}`,
+    description: SITE_CONFIG.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_CONFIG.name} | ${SITE_CONFIG.tagline} -- ${SITE_CONFIG.region}`,
+    description: SITE_CONFIG.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
+  },
 }
 
 export default function RootLayout({
