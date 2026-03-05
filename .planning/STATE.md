@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-05T22:09:40.415Z"
-last_activity: 2026-03-05 — Completed 05-01-PLAN.md (SEO infrastructure, OG images, nav fix, focus-visible)
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-05T22:14:49Z"
+last_activity: 2026-03-05 — Completed 05-02-PLAN.md (/services page, JSON-LD structured data, accessibility audit)
 progress:
   total_phases: 6
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 11
-  completed_plans: 10
-  percent: 91
+  completed_plans: 11
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-03)
 
 **Core value:** Every visitor should feel Satin Fabrication's quality before reading a word — premium dark luxury aesthetic communicating craftsmanship and trustworthiness on first sight
-**Current focus:** Phase 5 in progress — SEO infrastructure complete, /services page next
+**Current focus:** Phase 5 complete — /services page and JSON-LD shipped, ready for Phase 6 QA/polish
 
 ## Current Position
 
-Phase: 5 of 6 (Services Page and SEO)
-Plan: 1 of 2 in current phase (Plan 01 complete)
-Status: In Progress
-Last activity: 2026-03-05 — Completed 05-01-PLAN.md (SEO infrastructure, OG images, nav fix, focus-visible)
+Phase: 5 of 6 (Services Page and SEO) -- COMPLETE
+Plan: 2 of 2 in current phase (Phase 5 complete)
+Status: Phase 5 Complete
+Last activity: 2026-03-05 — Completed 05-02-PLAN.md (/services page, JSON-LD structured data, accessibility audit)
 
-Progress: [█████████░] 91%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -60,6 +60,7 @@ Progress: [█████████░] 91%
 | Phase 04 P02 | 2 | 2 tasks | 3 files |
 | Phase 04 P03 | 3 | 3 tasks | 3 files |
 | Phase 05 P01 | 2 | 2 tasks | 16 files |
+| Phase 05 P02 | 4 | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,9 @@ Recent decisions affecting current work:
 - [Phase 05]: Used system serif font (Georgia) in OG image to avoid Playfair bundle limit risk in edge runtime
 - [Phase 05]: SITE_CONFIG centralized in src/lib/metadata.ts — single source of truth for all SEO constants
 - [Phase 05]: NAV_LINKS use absolute paths (/#work, /services, /#process, /#contact) for multi-page navigation
+- [Phase 05]: JSON-LD rendering gated on NEXT_PUBLIC_ENABLE_JSONLD env var (default OFF) -- placeholder NAP must be replaced before production
+- [Phase 05]: warm-gray contrast passes AA (5.23:1) for all text and AAA for large text only -- locked design system trade-off
+- [Phase 05]: SERVICES_EXPANDED pattern extends base SERVICES with id, tagline, features, imageAlt for detail pages
 
 ### Pending Todos
 
@@ -109,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T22:09:40.412Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-05T22:14:49Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

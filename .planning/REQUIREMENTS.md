@@ -35,7 +35,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SRVC-01**: 4 service cards in 2x2 grid (single column mobile): Railings & Staircases, Gates & Fencing, Custom Furniture & Fixtures, Fireplace Surrounds & Features
 - [x] **SRVC-02**: Each card has dark background (#111111), subtle gold border, placeholder image (16:10), Playfair title, Raleway description, gold "Learn More →" link — staggered scroll reveal
 - [x] **SRVC-03**: Card hover state: border brightens to full gold opacity, image scales to 1.03x with overflow hidden
-- [ ] **SRVC-04**: Dedicated /services sub-page with expanded detail for each service offering
+- [x] **SRVC-04**: Dedicated /services sub-page with expanded detail for each service offering
 
 ### Portfolio
 
@@ -76,7 +76,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SEO-01**: Semantic HTML5 structure — proper header, main, section, footer, nav, article elements with single H1 per page and logical heading hierarchy
 - [x] **SEO-02**: Page title "Satin Fabrication | Custom Architectural Metalwork — Southern Ontario" and meta description
 - [x] **SEO-03**: Open Graph tags (title, description, image, type) and Twitter Card meta tags
-- [ ] **SEO-04**: JSON-LD structured data — LocalBusiness/HomeAndConstructionBusiness schema with services array, areaServed: Southern Ontario (deploy when NAP confirmed)
+- [x] **SEO-04**: JSON-LD structured data — LocalBusiness/HomeAndConstructionBusiness schema with services array, areaServed: Southern Ontario (deploy when NAP confirmed)
 - [x] **SEO-05**: Core Web Vitals compliance — next/image for all images, lazy loading, font display swap, explicit dimensions, minimal Framer Motion bundle via LazyMotion
 - [x] **SEO-06**: ARIA labels on interactive elements, focus-visible gold ring styles, alt text on all images, color contrast WCAG AAA compliance
 
@@ -159,11 +159,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOOT-02 | Phase 4 | Complete |
 | FOOT-03 | Phase 4 | Complete |
 | FOOT-04 | Phase 4 | Complete |
-| SRVC-04 | Phase 5 | Pending |
+| SRVC-04 | Phase 5 | Complete |
 | SEO-01 | Phase 5 | Complete |
 | SEO-02 | Phase 5 | Complete |
 | SEO-03 | Phase 5 | Complete |
-| SEO-04 | Phase 5 | Pending |
+| SEO-04 | Phase 5 | Complete |
 | SEO-05 | Phase 5 | Complete |
 | SEO-06 | Phase 5 | Complete |
 
