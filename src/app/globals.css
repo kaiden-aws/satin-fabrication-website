@@ -55,3 +55,22 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
+
+/* Micro-interactions — INTR-03 */
+/* Button gold glow on hover */
+.btn-glow {
+  transition: box-shadow 0.3s var(--ease-luxury);
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.3), 0 0 40px rgba(201, 169, 110, 0.1);
+}
+
+/* Form focus border transition */
+.input-luxury {
+  border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+  transition: border-color 0.3s var(--ease-luxury);
+}
+.input-luxury:focus {
+  border-color: var(--color-gold);
+  outline: none;
+}
