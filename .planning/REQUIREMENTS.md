@@ -9,12 +9,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Design System
 
-- [ ] **DSGN-01**: Site uses dark luxury aesthetic — matte black (#0A0A0A), charcoal (#1A1A1A), brushed gold accent (#C9A96E), off-white text (#F5F0EB), warm gray secondary (#8A8278)
-- [ ] **DSGN-02**: Playfair Display (serif headings) + Raleway (sans-serif body/UI) typography pairing loaded via next/font (self-hosted, display: swap)
+- [x] **DSGN-01**: Site uses dark luxury aesthetic — matte black (#0A0A0A), charcoal (#1A1A1A), brushed gold accent (#C9A96E), off-white text (#F5F0EB), warm gray secondary (#8A8278)
+- [x] **DSGN-02**: Playfair Display (serif headings) + Raleway (sans-serif body/UI) typography pairing loaded via next/font (self-hosted, display: swap)
 - [ ] **DSGN-03**: Subtle grain/noise texture overlay across entire site using static PNG at 3-5% opacity via CSS pseudo-element
 - [ ] **DSGN-04**: Scroll-triggered reveal animations with Framer Motion — fade in + translateY 30px, duration 0.7s, cubic-bezier easing [0.25, 0.1, 0.25, 1], children staggered 0.1-0.15s
 - [ ] **DSGN-05**: Reduced motion support via MotionConfig reducedMotion="user" for AODA compliance
-- [ ] **DSGN-06**: CSS design tokens for palette, spacing, typography scale, and luxury easing curve — enforced through Tailwind theme
+- [x] **DSGN-06**: CSS design tokens for palette, spacing, typography scale, and luxury easing curve — enforced through Tailwind theme
 
 ### Navigation
 
@@ -123,12 +123,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DSGN-01 | Phase 1 | Pending |
-| DSGN-02 | Phase 1 | Pending |
+| DSGN-01 | Phase 1 | Complete |
+| DSGN-02 | Phase 1 | Complete |
 | DSGN-03 | Phase 1 | Pending |
 | DSGN-04 | Phase 1 | Pending |
 | DSGN-05 | Phase 1 | Pending |
-| DSGN-06 | Phase 1 | Pending |
+| DSGN-06 | Phase 1 | Complete |
 | NAV-01 | Phase 2 | Pending |
 | NAV-02 | Phase 2 | Pending |
 | NAV-03 | Phase 2 | Pending |
