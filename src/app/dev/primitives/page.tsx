@@ -3,6 +3,9 @@
 import { MotionWrapper } from '@/components/ui/MotionWrapper'
 import { ParallaxWrapper } from '@/components/ui/ParallaxWrapper'
 import { MasonryGrid, MasonryItem } from '@/components/ui/MasonryGrid'
+import { BeforeAfterSlider } from '@/components/ui/BeforeAfterSlider'
+import { ProcessTimeline } from '@/components/ui/ProcessTimeline'
+import { ScrollAssembly } from '@/components/ui/ScrollAssembly'
 
 const revealItems = [
   { label: 'Reveal Item 1', delay: 0 },
@@ -11,6 +14,47 @@ const revealItems = [
   { label: 'Reveal Item 4', delay: 0.3 },
   { label: 'Reveal Item 5', delay: 0.4 },
   { label: 'Reveal Item 6', delay: 0.5 },
+]
+
+const timelineSteps = [
+  {
+    number: '01',
+    title: 'Consultation',
+    description:
+      'We discuss your vision, space requirements, and design preferences to understand exactly what you need.',
+  },
+  {
+    number: '02',
+    title: 'Design',
+    description:
+      'Our team creates detailed CAD drawings and 3D renderings for your approval before any metal is cut.',
+  },
+  {
+    number: '03',
+    title: 'Material Selection',
+    description:
+      'Choose from premium metals — brushed steel, wrought iron, brass, or bronze — each selected for your project.',
+  },
+  {
+    number: '04',
+    title: 'Fabrication',
+    description:
+      'Skilled craftsmen shape, weld, and finish each piece by hand in our Southern Ontario workshop.',
+  },
+  {
+    number: '05',
+    title: 'Installation',
+    description:
+      'We deliver and install with precision, ensuring every detail meets our exacting standards.',
+  },
+]
+
+const assemblyPieces = [
+  { id: 'piece-1', label: 'Rail', initialX: -200, initialY: -150, initialRotate: -25 },
+  { id: 'piece-2', label: 'Post', initialX: 180, initialY: -100, initialRotate: 15 },
+  { id: 'piece-3', label: 'Cap', initialX: -150, initialY: 120, initialRotate: 30 },
+  { id: 'piece-4', label: 'Base', initialX: 200, initialY: 80, initialRotate: -20 },
+  { id: 'piece-5', label: 'Bracket', initialX: -50, initialY: -200, initialRotate: 45 },
 ]
 
 const masonryItems = [
@@ -110,6 +154,47 @@ export default function PrimitivesPage() {
             </MasonryItem>
           ))}
         </MasonryGrid>
+      </section>
+
+      {/* BeforeAfterSlider Demo */}
+      <section className="mx-auto max-w-5xl py-24">
+        <h2 className="font-display text-2xl font-semibold text-gold mb-2">
+          BeforeAfterSlider
+        </h2>
+        <p className="font-body text-warm-gray mb-8">
+          Drag the gold handle or use arrow keys to compare before and after
+          states.
+        </p>
+        <BeforeAfterSlider
+          beforeSrc="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=500&fit=crop"
+          afterSrc="https://images.unsplash.com/photo-1504917595217-d4dc5efe5a74?w=800&h=500&fit=crop"
+          beforeAlt="Raw metal before fabrication"
+          afterAlt="Finished metalwork after fabrication"
+          className="mx-auto max-w-2xl"
+        />
+      </section>
+
+      {/* ProcessTimeline Demo */}
+      <section className="mx-auto max-w-5xl py-24">
+        <h2 className="font-display text-2xl font-semibold text-gold mb-2">
+          ProcessTimeline
+        </h2>
+        <p className="font-body text-warm-gray mb-8">
+          Scroll to watch the gold connecting line draw between steps.
+        </p>
+        <ProcessTimeline steps={timelineSteps} className="max-w-xl" />
+      </section>
+
+      {/* ScrollAssembly Demo */}
+      <section className="mx-auto max-w-5xl py-24">
+        <h2 className="font-display text-2xl font-semibold text-gold mb-2">
+          ScrollAssembly
+        </h2>
+        <p className="font-body text-warm-gray mb-8">
+          Scroll through to watch scattered pieces converge into an assembled
+          form.
+        </p>
+        <ScrollAssembly pieces={assemblyPieces} />
       </section>
 
       {/* Footer note */}
