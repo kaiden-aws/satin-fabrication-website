@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-03-05T22:24:59.528Z"
-last_activity: 2026-03-05 — Completed 05-02-PLAN.md (/services page, JSON-LD structured data, accessibility audit)
+status: in-progress
+stopped_at: Completed 06-02-PLAN.md
+last_updated: "2026-03-05T22:51:32Z"
+last_activity: 2026-03-05 — Completed 06-02-PLAN.md (touch overlays, contrast audit, dev route exclusion)
 progress:
   total_phases: 6
   completed_phases: 5
-  total_plans: 11
-  completed_plans: 11
-  percent: 100
+  total_plans: 14
+  completed_plans: 12
+  percent: 86
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-03)
 
 **Core value:** Every visitor should feel Satin Fabrication's quality before reading a word — premium dark luxury aesthetic communicating craftsmanship and trustworthiness on first sight
-**Current focus:** Phase 5 complete — /services page and JSON-LD shipped, ready for Phase 6 QA/polish
+**Current focus:** Phase 6 in progress — Polish, accessibility, and pre-launch QA
 
 ## Current Position
 
-Phase: 5 of 6 (Services Page and SEO) -- COMPLETE
-Plan: 2 of 2 in current phase (Phase 5 complete)
-Status: Phase 5 Complete
-Last activity: 2026-03-05 — Completed 05-02-PLAN.md (/services page, JSON-LD structured data, accessibility audit)
+Phase: 6 of 6 (Polish, Accessibility & Pre-Launch QA)
+Plan: 2 of 3 in current phase
+Status: Phase 6 In Progress
+Last activity: 2026-03-05 — Completed 06-02-PLAN.md (touch overlays, contrast audit, dev route exclusion)
 
-Progress: [██████████] 100%
+Progress: [█████████░] 86%
 
 ## Performance Metrics
 
@@ -61,6 +61,7 @@ Progress: [██████████] 100%
 | Phase 04 P03 | 3 | 3 tasks | 3 files |
 | Phase 05 P01 | 2 | 2 tasks | 16 files |
 | Phase 05 P02 | 4 | 2 tasks | 8 files |
+| Phase 06 P02 | 1 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -100,6 +101,9 @@ Recent decisions affecting current work:
 - [Phase 05]: JSON-LD rendering gated on NEXT_PUBLIC_ENABLE_JSONLD env var (default OFF) -- placeholder NAP must be replaced before production
 - [Phase 05]: warm-gray contrast passes AA (5.23:1) for all text and AAA for large text only -- locked design system trade-off
 - [Phase 05]: SERVICES_EXPANDED pattern extends base SERVICES with id, tagline, features, imageAlt for detail pages
+- [Phase 06]: Touch-first overlay: opacity-100 default with @media(hover:hover) gate -- ensures content never hidden on touch devices
+- [Phase 06]: All production gold (#C9A96E) text passes WCAG AAA (7:1+) on all backgrounds -- no contrast changes needed
+- [Phase 06]: /dev/ routes excluded from robots.txt indexing -- dev primitives page hidden from search engines
 
 ### Pending Todos
 
@@ -113,6 +117,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T22:14:49Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-05T22:51:32Z
+Stopped at: Completed 06-02-PLAN.md
 Resume file: None
