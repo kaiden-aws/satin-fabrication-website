@@ -28,6 +28,12 @@ export function CustomCursor() {
   }, [])
 
   useEffect(() => {
+    // Only activate on fine-pointer (mouse/trackpad) devices
+    const hasFinPointer = window.matchMedia('(pointer: fine)').matches
+    if (!hasFinPointer) return
+
+    document.documentElement.classList.add('cursor-active')
+
     const handleMouseMove = (e: MouseEvent) => {
       targetRef.current.x = e.clientX
       targetRef.current.y = e.clientY
@@ -60,6 +66,7 @@ export function CustomCursor() {
     rafRef.current = requestAnimationFrame(animate)
 
     return () => {
+      document.documentElement.classList.remove('cursor-active')
       window.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseover', handleMouseOver)
       document.removeEventListener('mouseout', handleMouseOut)

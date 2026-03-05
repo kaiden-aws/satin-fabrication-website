@@ -76,44 +76,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Custom cursor — INTR-01 */
-/* Only shown on devices with a fine pointer (mouse/trackpad) */
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-
-  a, button, [data-cursor] {
-    cursor: none;
-  }
-
-  .custom-cursor {
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-gold);
-    border-radius: 50%;
-    margin-left: -4px;
-    margin-top: -4px;
-    transition: width 0.3s var(--ease-luxury),
-                height 0.3s var(--ease-luxury),
-                margin 0.3s var(--ease-luxury),
-                background-color 0.3s var(--ease-luxury),
-                border-color 0.3s var(--ease-luxury);
-    will-change: transform;
-  }
-
-  .custom-cursor.cursor-expanded {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: 1.5px solid var(--color-gold);
-    margin-left: -20px;
-    margin-top: -20px;
-  }
+/* JS adds .cursor-active to <html> on fine-pointer devices */
+.cursor-active,
+.cursor-active a,
+.cursor-active button,
+.cursor-active [data-cursor] {
+  cursor: none;
 }
 
-/* Hide cursor on touch devices — prevents frozen gold dot (Pitfall 5) */
-@media (pointer: coarse) {
-  .custom-cursor {
-    display: none;
-  }
+.custom-cursor {
+  display: none;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-gold);
+  border-radius: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  transition: width 0.3s var(--ease-luxury),
+              height 0.3s var(--ease-luxury),
+              margin 0.3s var(--ease-luxury),
+              background-color 0.3s var(--ease-luxury),
+              border-color 0.3s var(--ease-luxury);
+  will-change: transform;
+}
+
+.cursor-active .custom-cursor {
+  display: block;
+}
+
+.custom-cursor.cursor-expanded {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1.5px solid var(--color-gold);
+  margin-left: -20px;
+  margin-top: -20px;
 }
