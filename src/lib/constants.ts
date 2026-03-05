@@ -39,6 +39,77 @@ export const SERVICES = [
   },
 ] as const
 
+export const SERVICES_EXPANDED = [
+  {
+    id: 'railings-staircases',
+    title: 'Railings & Staircases',
+    tagline: 'Elevate every level of your home',
+    description:
+      'Our custom railings and staircases are designed to transform your interior and exterior spaces with flowing lines and meticulous detailing. Each piece is hand-forged from premium metals, combining structural integrity with artistic expression to create a centrepiece that defines your home.',
+    features: [
+      'Spiral and straight configurations',
+      'Glass, cable, and traditional balusters',
+      'Interior and exterior applications',
+      'Code-compliant engineering',
+    ],
+    image:
+      'https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1200&h=800&fit=crop&q=80',
+    imageAlt:
+      'Custom metal staircase railing with glass panels in a modern home interior',
+  },
+  {
+    id: 'gates-fencing',
+    title: 'Gates & Fencing',
+    tagline: 'Grand entrances that make a statement',
+    description:
+      'From sweeping driveway gates to intimate garden enclosures, our ornamental metalwork combines security with sculptural beauty. Every gate is designed to complement your property architecture while providing lasting protection crafted from weather-resistant materials.',
+    features: [
+      'Automated driveway and pedestrian gates',
+      'Ornamental and privacy fencing',
+      'Weather-resistant powder-coated finishes',
+      'Custom hardware and locking systems',
+    ],
+    image:
+      'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=800&fit=crop&q=80',
+    imageAlt:
+      'Ornamental wrought iron entry gate with scrollwork details at a residential estate',
+  },
+  {
+    id: 'custom-furniture-fixtures',
+    title: 'Custom Furniture & Fixtures',
+    tagline: 'Functional art for every room',
+    description:
+      'Bespoke metal furniture and fixtures -- from sculptural shelving units to hand-forged table bases -- designed to anchor any space with purpose and personality. We collaborate closely with you to create pieces that are as functional as they are beautiful, built to last generations.',
+    features: [
+      'Dining and console table bases',
+      'Shelving and display systems',
+      'Lighting fixtures and chandeliers',
+      'Architectural room dividers',
+    ],
+    image:
+      'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&h=800&fit=crop&q=80',
+    imageAlt:
+      'Bespoke metal shelving unit with industrial finish in a contemporary living space',
+  },
+  {
+    id: 'fireplace-surrounds-features',
+    title: 'Fireplace Surrounds & Features',
+    tagline: 'The heart of the room, forged in metal',
+    description:
+      'Statement fireplace surrounds and architectural features forged to become the focal point of any room. Our surrounds range from minimalist blackened steel to elaborate ornamental designs, each one custom-sized and finished to integrate seamlessly with your interior design vision.',
+    features: [
+      'Full surround and mantel designs',
+      'Blackened steel, brass, and bronze finishes',
+      'Heat-resistant engineering',
+      'Matching hearth accessories',
+    ],
+    image:
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop&q=80',
+    imageAlt:
+      'Contemporary blackened steel fireplace surround as the focal point of a luxury living room',
+  },
+] as const
+
 export const PORTFOLIO_PROJECTS = [
   {
     title: 'Modern Floating Staircase',
