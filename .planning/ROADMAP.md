@@ -107,7 +107,11 @@ Plans:
   3. Enabling "Reduce motion" in the OS completely suppresses all scroll-triggered reveals and entrance animations — no partial animations, no flashes
   4. The quote form submits successfully in a production environment and does not silently drop submissions (either a confirmation mechanism or a documented interim capture method is in place before launch)
   5. All gold accent usage passes WCAG AAA contrast when checked against the dark backgrounds — gold is decorative only; no gold text on dark backgrounds fails contrast
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 06-01-PLAN.md — Reduced motion hardening with useReducedMotion() guards on all animated components
+- [ ] 06-02-PLAN.md — Touch-friendly portfolio overlays, gold text contrast audit, and dev page exclusion
+- [ ] 06-03-PLAN.md — Formspree form submission capture and production Lighthouse verification
 
 ## Progress
 
@@ -121,4 +125,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. UI Primitives | 0/2 | Not started | - |
 | 4. Homepage Sections | 3/3 | Complete   | 2026-03-05 |
 | 5. Services Page and SEO | 2/2 | Complete   | 2026-03-05 |
-| 6. Polish, Accessibility, and Pre-Launch QA | 0/TBD | Not started | - |
+| 6. Polish, Accessibility, and Pre-Launch QA | 0/3 | Not started | - |
