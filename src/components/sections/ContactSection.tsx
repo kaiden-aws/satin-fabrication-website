@@ -7,10 +7,6 @@ import { m } from 'motion/react'
 import { contactSchema, type ContactFormData } from '@/lib/schemas'
 import { MotionWrapper } from '@/components/ui/MotionWrapper'
 
-const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_ID
-  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
-  : null
-
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -28,16 +24,14 @@ export function ContactSection() {
     setSubmitError(null)
     setIsSubmitting(true)
     try {
-      if (FORMSPREE_URL) {
-        const res = await fetch(FORMSPREE_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(data),
-        })
-        if (!res.ok) {
-          setSubmitError('Something went wrong. Please try again.')
-          return
-        }
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+      if (!res.ok) {
+        setSubmitError('Something went wrong. Please try again.')
+        return
       }
       setIsSubmitted(true)
     } catch {
