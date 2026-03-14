@@ -62,7 +62,7 @@ export default function OGImage() {
             letterSpacing: '0.2em',
           }}
         >
-          CUSTOM ARCHITECTURAL METALWORK
+          CUSTOM METAL FABRICATION
         </span>
 
         {/* Gold horizontal rule */}

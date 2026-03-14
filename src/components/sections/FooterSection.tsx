@@ -1,54 +1,92 @@
 'use client'
 
-import { Instagram, Facebook, Linkedin } from 'lucide-react'
+import Image from 'next/image'
+import { Instagram, Facebook } from 'lucide-react'
 import { SOCIAL_LINKS } from '@/lib/constants'
 
-const iconMap: Record<string, typeof Instagram> = {
-  Instagram,
-  Facebook,
-  Linkedin,
-}
+const iconMap: Record<string, typeof Instagram> = { Instagram, Facebook }
 
 export function FooterSection() {
   return (
-    <footer className="py-16 px-6 border-t border-charcoal/50">
-      <div className="mx-auto max-w-6xl">
-        {/* Top area — 3-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {/* Column 1 — Company info */}
-          <div>
-            <h3 className="font-display text-2xl text-cream">
-              SATIN FABRICATION
-            </h3>
-            <p className="mt-2 font-body text-warm-gray text-sm">
-              Custom Architectural Metalwork
+    <footer className="relative py-24 px-8 md:px-16 lg:px-24 overflow-hidden">
+      {/* Large background watermark */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+      >
+        <span className="font-display text-[clamp(8rem,25vw,20rem)] font-light text-burnished/[0.05] tracking-wider">
+          SATIN
+        </span>
+      </div>
+
+      {/* Top divider */}
+      <div className="section-divider max-w-[1400px] mb-20" />
+
+      <div className="mx-auto max-w-[1400px] relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+          {/* Brand column */}
+          <div className="md:col-span-5">
+            <a href="/" className="inline-block focus-gold">
+              <Image
+                src="/logo.webp"
+                alt="Satin Fabrication"
+                width={120}
+                height={124}
+                className="h-14 w-auto object-contain"
+              />
+            </a>
+            <p className="mt-3 font-body text-xs tracking-[0.2em] uppercase text-stone">
+              Custom Metal Fabrication
             </p>
-            <p className="mt-4 font-body text-warm-gray/70 text-sm">
-              Proudly serving Southern Ontario&apos;s finest homes
+            <p className="mt-6 font-body text-stone/70 text-sm max-w-xs leading-relaxed">
+              Custom steel and stainless fabrication in Southern Ontario.
+              If you can think of it, we can build it.
             </p>
           </div>
 
-          {/* Column 2 — Contact details */}
-          <div>
-            <h4 className="font-display text-lg text-cream mb-4">Contact</h4>
-            <a
-              href="tel:+15551234567"
-              className="block font-body text-cream hover:text-gold transition-colors focus-gold"
-            >
-              (555) 123-4567
-            </a>
-            <a
-              href="mailto:info@satinfabrication.com"
-              className="block mt-2 font-body text-cream hover:text-gold transition-colors focus-gold"
-            >
-              info@satinfabrication.com
-            </a>
+          {/* Navigation column */}
+          <div className="md:col-span-3">
+            <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-stone mb-6">
+              Navigation
+            </h4>
+            <nav className="flex flex-col gap-3">
+              <a href="/#work" className="font-body text-sm text-ivory/70 hover:text-burnished transition-colors focus-gold">
+                Portfolio
+              </a>
+              <a href="/services" className="font-body text-sm text-ivory/70 hover:text-burnished transition-colors focus-gold">
+                Services
+              </a>
+              <a href="/#process" className="font-body text-sm text-ivory/70 hover:text-burnished transition-colors focus-gold">
+                Process
+              </a>
+              <a href="/#contact" className="font-body text-sm text-ivory/70 hover:text-burnished transition-colors focus-gold">
+                Contact
+              </a>
+            </nav>
           </div>
 
-          {/* Column 3 — Social links */}
-          <div>
-            <h4 className="font-display text-lg text-cream mb-4">Follow Us</h4>
-            <div className="flex gap-4">
+          {/* Contact column */}
+          <div className="md:col-span-4">
+            <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-stone mb-6">
+              Get in Touch
+            </h4>
+            <div className="space-y-3">
+              <a
+                href="tel:+12263430035"
+                className="block font-body text-sm text-ivory/70 hover:text-burnished transition-colors focus-gold"
+              >
+                (226) 343-0035
+              </a>
+              <a
+                href="mailto:kaiden@satinfabrication.ca"
+                className="block font-body text-sm text-ivory/70 hover:text-burnished transition-colors focus-gold"
+              >
+                kaiden@satinfabrication.ca
+              </a>
+            </div>
+
+            {/* Social */}
+            <div className="flex gap-5 mt-8">
               {SOCIAL_LINKS.map((link) => {
                 const IconComponent = iconMap[link.icon]
                 if (!IconComponent) return null
@@ -59,9 +97,9 @@ export function FooterSection() {
                     aria-label={link.label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-warm-gray hover:text-gold transition-colors duration-300 focus-gold"
+                    className="text-stone hover:text-burnished transition-colors duration-300 focus-gold"
                   >
-                    <IconComponent size={20} />
+                    <IconComponent size={18} strokeWidth={1.5} />
                   </a>
                 )
               })}
@@ -70,29 +108,28 @@ export function FooterSection() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-charcoal/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-body text-sm text-warm-gray/70">
-            &copy; {new Date().getFullYear()} Satin Fabrication. All rights
-            reserved.
+        <div className="mt-20 pt-8 border-t border-slate/40 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="font-body text-xs text-stone/50">
+            &copy; {new Date().getFullYear()} Satin Fabrication. All rights reserved.
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="font-body text-sm text-warm-gray hover:text-gold transition-colors inline-flex items-center gap-1 focus-gold"
+            className="font-body text-xs text-stone/50 hover:text-burnished transition-colors inline-flex items-center gap-2 focus-gold group"
             aria-label="Scroll to top"
           >
-            Back to Top
+            <span>Back to Top</span>
             <svg
               aria-hidden="true"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
               fill="none"
-              className="ml-1"
+              className="transition-transform duration-300 group-hover:-translate-y-0.5"
             >
               <path
-                d="M6 10V2M6 2L2 6M6 2L10 6"
+                d="M5 9V1M5 1L1 5M5 1L9 5"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />

@@ -4,22 +4,29 @@ import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { FooterSection } from '@/components/sections/FooterSection'
-import { generateLocalBusinessJsonLd } from '@/lib/jsonld'
+import { generateLocalBusinessJsonLd, generateFAQJsonLd } from '@/lib/jsonld'
 
 export default function HomePage() {
   return (
     <>
-      {process.env.NEXT_PUBLIC_ENABLE_JSONLD === 'true' && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateLocalBusinessJsonLd()).replace(
-              /</g,
-              '\\u003c'
-            ),
-          }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateLocalBusinessJsonLd()).replace(
+            /</g,
+            '\\u003c'
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQJsonLd()).replace(
+            /</g,
+            '\\u003c'
+          ),
+        }}
+      />
       <main id="main-content">
         <HeroSection />
         <ServicesSection />

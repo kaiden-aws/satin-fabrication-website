@@ -2,31 +2,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Typography — maps next/font CSS variables to Tailwind utilities */
-  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
-  --font-body: var(--font-raleway), "Raleway", "Helvetica Neue", sans-serif;
+  /* Typography — Clean sans-serif for both display and body */
+  --font-display: var(--font-outfit), "Outfit", "Helvetica Neue", sans-serif;
+  --font-body: var(--font-outfit), "Outfit", "Helvetica Neue", sans-serif;
 
-  /* Color palette — DSGN-01 tokens */
-  --color-void: #0A0A0A;
-  --color-charcoal: #1A1A1A;
-  --color-surface: #111111;
-  --color-gold: #C9A96E;
-  --color-gold-light: #D4B87A;
-  --color-gold-dim: #8A7544;
-  --color-cream: #F5F0EB;
-  --color-warm-gray: #8A8278;
+  /* Color palette — Clean Professional (Steel Blue accent) */
+  --color-void: #FFFFFF;
+  --color-obsidian: #F5F5F5;
+  --color-carbon: #E8E8E8;
+  --color-burnished: #2563EB;
+  --color-burnished-light: #3B82F6;
+  --color-burnished-dim: #1D4ED8;
+  --color-ivory: #1A1A1A;
+  --color-stone: #6B7280;
+  --color-slate: #D1D5DB;
 
-  /* Easing — DSGN-04 specified cubic-bezier for luxury motion */
-  --ease-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* Legacy aliases for Tailwind utilities */
+  --color-charcoal: #F5F5F5;
+  --color-surface: #E8E8E8;
+  --color-gold: #2563EB;
+  --color-gold-light: #3B82F6;
+  --color-gold-dim: #1D4ED8;
+  --color-cream: #1A1A1A;
+  --color-warm-gray: #6B7280;
 
-  /* Animation — DSGN-04 reveal animation preset */
-  --animate-reveal: reveal 0.7s var(--ease-luxury) both;
+  /* Easing — smooth motion curves */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-dramatic: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Animation presets */
+  --animate-reveal: reveal 0.8s var(--ease-luxury) both;
+  --animate-slide-up: slideUp 1s var(--ease-luxury) both;
+  --animate-fade: fade 0.6s var(--ease-luxury) both;
 }
 
+/* ─── Keyframes ─── */
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -34,12 +48,43 @@
   }
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes heroGradient {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
-/* Reduced motion — DSGN-05 CSS-level override */
+@keyframes lineExpand {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+/* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -51,75 +96,126 @@
   }
 }
 
-/* Base styles */
+/* ─── Base styles ─── */
 body {
   font-family: var(--font-body);
   background-color: var(--color-void);
-  color: var(--color-cream);
+  color: var(--color-ivory);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
 }
 
-/* Micro-interactions — INTR-03 */
-/* Button gold glow on hover */
-.btn-glow {
-  transition: box-shadow 0.3s var(--ease-luxury);
-}
-.btn-glow:hover {
-  box-shadow: 0 0 20px rgba(201, 169, 110, 0.3), 0 0 40px rgba(201, 169, 110, 0.1);
+::selection {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: var(--color-ivory);
 }
 
-/* Form focus border transition */
-.input-luxury {
-  border-bottom: 1px solid rgba(201, 169, 110, 0.3);
-  transition: border-color 0.3s var(--ease-luxury);
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
 }
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-stone);
+}
+
+/* ─── Buttons ─── */
+.btn-glow {
+  transition: box-shadow 0.4s var(--ease-luxury), background-color 0.4s var(--ease-luxury), color 0.4s var(--ease-luxury), border-color 0.4s var(--ease-luxury);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.2), 0 0 60px rgba(37, 99, 235, 0.06);
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-burnished);
+  color: var(--color-burnished);
+  transition: color 0.5s var(--ease-luxury);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-burnished);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-luxury);
+  z-index: -1;
+}
+
+.btn-primary:hover {
+  color: #FFFFFF;
+}
+
+.btn-primary:hover::before {
+  transform: scaleX(1);
+}
+
+/* ─── Form inputs ─── */
+.input-luxury {
+  border-bottom: 1px solid var(--color-slate);
+  transition: border-color 0.4s var(--ease-luxury);
+}
+
 .input-luxury:focus {
-  border-color: var(--color-gold);
+  border-color: var(--color-burnished);
   outline: none;
 }
 
-/* Custom cursor — INTR-01 */
-/* JS adds .cursor-active to <html> on fine-pointer devices */
-.cursor-active,
-.cursor-active a,
-.cursor-active button,
-.cursor-active [data-cursor] {
-  cursor: none;
+/* ─── Section divider ─── */
+.section-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-slate), transparent);
+  margin: 0 auto;
 }
 
-.custom-cursor {
-  display: none;
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-gold);
-  border-radius: 50%;
-  margin-left: -4px;
-  margin-top: -4px;
-  transition: width 0.3s var(--ease-luxury),
-              height 0.3s var(--ease-luxury),
-              margin 0.3s var(--ease-luxury),
-              background-color 0.3s var(--ease-luxury),
-              border-color 0.3s var(--ease-luxury);
-  will-change: transform;
+/* ─── Image hover ─── */
+.img-reveal {
+  overflow: hidden;
 }
 
-.cursor-active .custom-cursor {
-  display: block;
+.img-reveal img {
+  transition: transform 0.8s var(--ease-luxury), filter 0.8s var(--ease-luxury);
 }
 
-.custom-cursor.cursor-expanded {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: 1.5px solid var(--color-gold);
-  margin-left: -20px;
-  margin-top: -20px;
+.img-reveal:hover img {
+  transform: scale(1.05);
 }
 
-/* Focus-visible gold ring for keyboard navigation -- SEO-06 */
+/* ─── Focus ring ─── */
 .focus-gold {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-void;
 }
+
+/* ─── Hero logo ─── */
+.hero-logo-wrap {
+  max-width: clamp(280px, 50vw, 550px);
+}
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+}
+
+/* ─── Stagger animation delays ─── */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }

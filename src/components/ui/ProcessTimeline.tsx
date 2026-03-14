@@ -19,7 +19,6 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
   const shouldReduceMotion = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Hooks called unconditionally (rules of hooks)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end center'],
@@ -30,29 +29,21 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
   return (
     <div ref={containerRef} className={cn(className)}>
       <div className="relative">
-        {/* SVG connecting line — decorative */}
+        {/* SVG connecting line */}
         <svg
-          className="absolute left-6 top-0 h-full w-1"
+          className="absolute left-4 top-0 h-full w-1"
           viewBox="0 0 2 100"
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          {/* Background track */}
           <line
-            x1="1"
-            y1="0"
-            x2="1"
-            y2="100"
-            stroke="var(--color-charcoal)"
+            x1="1" y1="0" x2="1" y2="100"
+            stroke="var(--color-slate)"
             strokeWidth="2"
           />
-          {/* Animated gold line — static full draw when reduced motion */}
           <m.line
-            x1="1"
-            y1="0"
-            x2="1"
-            y2="100"
-            stroke="var(--color-gold)"
+            x1="1" y1="0" x2="1" y2="100"
+            stroke="var(--color-burnished)"
             strokeWidth="2"
             style={{ pathLength: shouldReduceMotion ? 1 : pathLength }}
             strokeDasharray="0 1"
@@ -65,31 +56,25 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
             <div
               key={step.number}
               className={cn(
-                'relative pl-16 pb-16',
+                'relative pl-14 pb-14',
                 i === steps.length - 1 && 'pb-0'
               )}
             >
-              {/* Step dot on the line */}
-              <div className="absolute left-4 top-0 flex h-5 w-5 items-center justify-center rounded-full border-2 border-gold bg-void" />
-
-              {/* Large step number (background decoration) */}
-              <span className="font-display text-6xl font-bold text-gold/10 select-none">
+              <div className="absolute left-2 top-0 flex h-5 w-5 items-center justify-center rounded-full border border-burnished bg-void" />
+              <span className="font-display text-5xl font-light text-burnished/15 select-none leading-none">
                 {step.number}
               </span>
-
-              {/* Title — overlaps the large number */}
-              <h3 className="-mt-8 font-display text-xl font-semibold text-cream">
+              <h3 className="-mt-6 font-display text-xl font-light text-ivory relative z-10">
                 {step.title}
               </h3>
-
-              {/* Description */}
-              <p className="mt-2 font-body text-warm-gray">{step.description}</p>
+              <div className="mt-3 h-px w-6 bg-burnished/30" />
+              <p className="mt-3 font-body text-stone text-sm leading-relaxed">{step.description}</p>
             </div>
           ) : (
             <m.div
               key={step.number}
               className={cn(
-                'relative pl-16 pb-16',
+                'relative pl-14 pb-14',
                 i === steps.length - 1 && 'pb-0'
               )}
               initial={{ opacity: 0, y: 30 }}
@@ -97,25 +82,19 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
               viewport={{ once: true, margin: '-50px' }}
               transition={{
                 duration: 0.7,
-                delay: i * 0.15,
-                ease: [0.25, 0.1, 0.25, 1],
+                delay: i * 0.12,
+                ease: [0.16, 1, 0.3, 1],
               }}
             >
-              {/* Step dot on the line */}
-              <div className="absolute left-4 top-0 flex h-5 w-5 items-center justify-center rounded-full border-2 border-gold bg-void" />
-
-              {/* Large step number (background decoration) */}
-              <span className="font-display text-6xl font-bold text-gold/10 select-none">
+              <div className="absolute left-2 top-0 flex h-5 w-5 items-center justify-center rounded-full border border-burnished bg-void" />
+              <span className="font-display text-5xl font-light text-burnished/15 select-none leading-none">
                 {step.number}
               </span>
-
-              {/* Title — overlaps the large number */}
-              <h3 className="-mt-8 font-display text-xl font-semibold text-cream">
+              <h3 className="-mt-6 font-display text-xl font-light text-ivory relative z-10">
                 {step.title}
               </h3>
-
-              {/* Description */}
-              <p className="mt-2 font-body text-warm-gray">{step.description}</p>
+              <div className="mt-3 h-px w-6 bg-burnished/30" />
+              <p className="mt-3 font-body text-stone text-sm leading-relaxed">{step.description}</p>
             </m.div>
           )
         )}

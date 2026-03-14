@@ -6,10 +6,9 @@ export const contactSchema = z.object({
   phone: z.string().min(1, 'Phone number is required'),
   projectType: z.enum(
     [
-      'Railings & Staircases',
-      'Gates & Fencing',
-      'Custom Furniture & Fixtures',
-      'Fireplace Surrounds',
+      'New Fabrication',
+      'Repair / Modification',
+      'Design Help Needed',
       'Other',
     ],
     { errorMap: () => ({ message: 'Please select a project type' }) }

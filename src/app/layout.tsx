@@ -1,25 +1,16 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Raleway } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import { Providers } from '@/providers/Providers'
-import { GrainOverlay } from '@/components/layout/GrainOverlay'
 import { SkipLink } from '@/components/layout/SkipLink'
 import { Navbar } from '@/components/layout/Navbar'
-import { CustomCursor } from '@/components/layout/CustomCursor'
 import { SITE_CONFIG } from '@/lib/metadata'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-outfit',
   display: 'swap',
-  weight: ['400', '700'],
-})
-
-const raleway = Raleway({
-  subsets: ['latin'],
-  variable: '--font-raleway',
-  display: 'swap',
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -50,6 +41,13 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
     },
   },
+  alternates: {
+    canonical: '/',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 }
 
 export default function RootLayout({
@@ -58,15 +56,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${raleway.variable}`} suppressHydrationWarning>
-      <body className="bg-void text-cream antialiased font-body">
+    <html lang="en-CA" className={outfit.variable} suppressHydrationWarning>
+      <body className="bg-void text-ivory antialiased font-body">
         <SkipLink />
         <Providers>
           <Navbar />
           {children}
-          <CustomCursor />
         </Providers>
-        <GrainOverlay />
       </body>
     </html>
   )
