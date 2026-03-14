@@ -22,7 +22,7 @@ export function HeroSection() {
           quality={85}
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}
@@ -31,26 +31,26 @@ export function HeroSection() {
           <div>
             <div className="flex items-center gap-4 mb-0">
               <div className="h-px w-12 bg-white/60" />
-              <span className="font-body text-xs tracking-[0.4em] uppercase text-white/70">
+              <span className="font-body text-xs tracking-[0.4em] uppercase text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
                 Custom Metal Fabrication
               </span>
             </div>
 
-            <h1 className="-my-12">
+            <h1 className="my-4">
               <Image
                 src="/satinsidelogo.webp"
                 alt="Satin Fabrication"
                 width={600}
                 height={200}
                 priority
-                className="w-[300px] md:w-[440px] lg:w-[540px] h-auto brightness-0 invert -ml-10 md:-ml-14"
+                className="w-[300px] md:w-[440px] lg:w-[540px] h-auto brightness-0 invert -ml-4 md:-ml-14"
               />
               <span className="sr-only">Satin Fabrication — Custom Metal Fabrication in Southern Ontario</span>
             </h1>
 
             <div className="h-px w-24 bg-white/30 mt-0 mb-4" />
 
-            <p className="font-body text-white/80 text-base md:text-lg max-w-md leading-relaxed">
+            <p className="font-body text-white text-base md:text-lg max-w-md leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
               Custom steel and stainless fabrication. Give us your
               idea&nbsp;&mdash; we&apos;ll bring it to life.
             </p>
@@ -87,13 +87,13 @@ export function HeroSection() {
                 animate={{ width: 48 }}
                 transition={{ duration: 0.8, delay: 0.5, ease }}
               />
-              <span className="font-body text-xs tracking-[0.4em] uppercase text-white/70">
+              <span className="font-body text-xs tracking-[0.4em] uppercase text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
                 Custom Metal Fabrication
               </span>
             </m.div>
 
             <m.h1
-              className="-my-12"
+              className="my-4"
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.1, ease }}
@@ -104,7 +104,7 @@ export function HeroSection() {
                 width={600}
                 height={200}
                 priority
-                className="w-[300px] md:w-[440px] lg:w-[540px] h-auto brightness-0 invert -ml-10 md:-ml-14"
+                className="w-[300px] md:w-[440px] lg:w-[540px] h-auto brightness-0 invert -ml-4 md:-ml-14"
               />
               <span className="sr-only">Satin Fabrication — Custom Metal Fabrication in Southern Ontario</span>
             </m.h1>
@@ -124,7 +124,7 @@ export function HeroSection() {
             </m.div>
 
             <m.p
-              className="font-body text-white/80 text-base md:text-lg max-w-md leading-relaxed"
+              className="font-body text-white text-base md:text-lg max-w-md leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease }}
