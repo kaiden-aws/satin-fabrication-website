@@ -24,10 +24,19 @@ export function ContactSection() {
     setSubmitError(null)
     setIsSubmitting(true)
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          access_key: '24341514-c473-4214-b638-be40be4e62b8',
+          subject: `New Quote Request: ${data.projectType} — ${data.name}`,
+          from_name: 'Satin Fabrication Website',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          project_type: data.projectType,
+          message: data.description,
+        }),
       })
       if (!res.ok) {
         setSubmitError('Something went wrong. Please try again.')
